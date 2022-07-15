@@ -1,4 +1,4 @@
-<?= $this->extend('layouts/homelayout'); ?>
+<?= $this->extend('layouts/homeLayout'); ?>
 <?= $this->section('content'); ?>
 
 <?=$this->include('includes/header')?>
