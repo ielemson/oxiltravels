@@ -111,13 +111,18 @@
 
 $( ".delete" ).click(function() {
  var attr = $(this).attr("data-id");
-    $.confirm({
-    title: 'Confirm!',
-    content: 'Delete Category?',
+   
+ $.confirm({
+    title: 'Warning!',
+    content: 'Proceed with action ?',
+    type: 'red',
+    typeAnimated: true,
     buttons: {
-        confirm: function () {
-            // let num = $(this).attr("data-id")
-            var id = {'id': attr}
+        tryAgain: {
+            text: 'Delete',
+            btnClass: 'btn-red',
+            action: function(){
+              var id = {'id': attr}
             $.ajax({
                 url: "<?=base_url('admin/post/category/destroy')?>",
                 type: "POST",
@@ -136,20 +141,23 @@ $( ".delete" ).click(function() {
                  }
                 }
             });
+            }
         },
-        cancel: function () {
-            $.alert('Canceled!');
-        },
-       
+        close: function () {
+        }
     }
 });
+
+
 });
 
 // Upddate
 $( ".update" ).click(function() {
  var id = $(this).attr("data-id");
  var name = $(this).attr("data-name");
+
  $.confirm({
+    type: 'blue',
     title: 'Prompt!',
     content: '' +
     '<form action="" class="formName">' +

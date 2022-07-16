@@ -35,6 +35,7 @@
                                 <div class="card-footer text-end btn-group">
                                             <a href="<?=base_url('admin/post/edit/'.$post['id'])?>" class="btn btn-info btn-sm text-black"><i class="fa fa-edit"></i></a>
                                             <button  data-id="<?=$post['id'];?>" class="delete btn btn-danger btn-sm text-black"><i class="fa fa-trash"></i></button>
+                                    <button data-content="<?= $post['content'];?>" data-file="<?= $post['file'];?>" data-title="<?= $post['title'];  ?>" class="viewContent btn btn-primary btn-sm text-black"><i class="fa fa-eye"></i></button>
                                         </div>
                             </div>
                             
@@ -66,6 +67,7 @@ $( ".delete" ).click(function() {
     $.confirm({
     title: 'Confirm!',
     content: 'Delete Post?',
+    type: 'red',
     buttons: {
         confirm: function () {
             // let num = $(this).attr("data-id")
@@ -88,11 +90,25 @@ $( ".delete" ).click(function() {
             });
         },
         cancel: function () {
-            $.alert('Canceled!');
+            // $.alert('Canceled!');
         },
        
     }
 });
 });
+
+
+  // view content function
+  $(".viewContent").click(function() {
+        var content = $(this).attr("data-content");
+        var title = $(this).attr("data-title");
+        var img = $(this).attr("data-file");
+        $.dialog({
+        columnClass: 'col-md-12 col-lg-4 col-sm-12',
+        type: 'blue',
+    title: `<h5"><u>${title.toLocaleUpperCase()}</u></h5>`,
+    content: `<p>${content}</p> <br/> <img src="/frontend/images/post/${img}"/>`,
+});
+    });
 </script>
 <?=$this->endSection();?>

@@ -38,7 +38,6 @@
     <script src="<?=base_url("dashboard/assets/js/initiate-datatables.js")?>"></script>
     <script src="<?=base_url("dashboard/assets/js/lightbox.min.js")?>"></script>   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
-    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
     <?= $this->renderSection('extra_js'); ?>
 </body>
 
