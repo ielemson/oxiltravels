@@ -61,7 +61,7 @@
                       <li><a href="<?=base_url('/')?>">Gallery</a></li>
                       <li><a href="<?=base_url('/')?>">Blog</a></li>
                     </ul>
-                    <div class="group-md group-middle justify-content-sm-start"><a class="button button-lg button-primary button-ujarak" href="#">Get in touch</a></div>
+                    <!-- <div class="group-md group-middle justify-content-sm-start"><a class="button button-lg button-primary button-ujarak" href="#">Get in touch</a></div> -->
                   </div>
                 </div>
               </div>
@@ -87,7 +87,7 @@
                 </p>
               </div>
               <div class="col-sm-6 col-md-4 text-md-right">
-                <p class="rights"><a href="privacy-policy.html">Privacy Policy</a></p>
+                <p class="rights"><a href="<?=base_url('/')?>">Privacy Policy</a></p>
               </div>
             </div>
           </div>
