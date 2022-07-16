@@ -56,7 +56,7 @@ class Home extends BaseController
         $data['title_2'] = "Blog Post";
 		$data['banner_img'] = "post_dk.jpg";
 		$data['banner_active'] = "active";
-		$data['active_nav_contact'] = "active";
+		// $data['active_nav_contact'] = "active";
         return view('pages/post',$data);
     }
 
@@ -71,7 +71,7 @@ class Home extends BaseController
         $data['title_1'] = "Blog Post";
         $data['title_2'] = "Blog Post";
 		$data['banner_img'] = "post_dk.jpg";
-		$data['banner_active'] = "active";
+		// $data['banner_active'] = "active";
 		$data['active_nav_contact'] = "active";
         return view('pages/categorypost',$data);
     }
