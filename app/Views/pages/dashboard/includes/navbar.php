@@ -11,12 +11,12 @@
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end nav-link-menu" aria-labelledby="nav1">
                                     <ul class="nav-list">
-                                        <li><a href="" class="dropdown-item"><i class="fas fa-list"></i> Access Logs</a></li>
+                                        <li><a href="<?=base_url('/')?>" class="dropdown-item"><i class="fas fa-home"></i> Homepage</a></li>
                                         <div class="dropdown-divider"></div>
-                                        <li><a href="" class="dropdown-item"><i class="fas fa-database"></i> Back ups</a></li>
+                                        <!-- <li><a href="" class="dropdown-item"><i class="fas fa-database"></i> Back ups</a></li>
                                         <div class="dropdown-divider"></div>
                                         <li><a href="" class="dropdown-item"><i class="fas fa-cloud-download-alt"></i> Updates</a></li>
-                                        <div class="dropdown-divider"></div>
+                                        <div class="dropdown-divider"></div> -->
                                         <li><a href="" class="dropdown-item"><i class="fas fa-user-shield"></i> Roles</a></li>
                                     </ul>
                                 </div>

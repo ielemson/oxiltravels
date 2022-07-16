@@ -65,7 +65,16 @@
             
             <li class="rd-nav-item <?=$active_nav_contact ?? ''?>"><a class="rd-nav-link" href="<?=base_url('contact')?>">Contact Us</a>
             </li>
-          
+            <?php if ( isset($_SESSION['role']) && $_SESSION['role'] == "admin"):?>
+                 
+                <li class="rd-nav-item"><a class="rd-nav-link" href="#">Admin</a>
+               
+                <ul class="rd-menu rd-navbar-dropdown">
+                <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="<?=base_url('admin/dashboard')?>">Dashboard</a></li>
+                <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="<?=base_url('logout')?>">Logout</a></li>
+                </ul>
+            </li>
+                <?php endif; ?>
             </ul>
         </div>
         </div>
@@ -73,3 +82,4 @@
     </nav>
 </div>
 </header>
+

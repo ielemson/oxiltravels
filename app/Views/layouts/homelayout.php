@@ -48,6 +48,7 @@
     <script src="<?=base_url('frontend/js/core.min.js')?>"></script>
     <script src="<?=base_url('frontend/js/script.js')?>"></script>
     <script src="<?=base_url('frontend/js/lib/jquery.validate.js')?>"></script>
+    <script src="<?=base_url('frontend/js/moment.js')?>"></script>
     <!-- ========================= SECTION JS  ========================= -->
     <?= $this->renderSection('extra-js'); ?>
     <!-- ========================= SECTION JS END ===================== -->

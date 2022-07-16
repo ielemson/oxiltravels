@@ -4,17 +4,17 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Payment extends Model
+class Post extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'payments';
+    protected $table            = 'posts';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $insertID         = 0;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['name','email','phone','kin','kin_address','payment','education_yr','education','dob','gender','referral'];
+    protected $allowedFields    = ['post','category_id','title','file','status','content','slug','category_id'];
 
     // Dates
     protected $useTimestamps = true;

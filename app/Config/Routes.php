@@ -40,9 +40,11 @@ $routes->set404Override(function(){
 $routes->get('/', 'Home::index');
 // about us route
 $routes->get('about', 'Home::about');
-// contact us routen9-mo=0
+// contact us route 
 $routes->get('contact', 'Home::contact');
-
+// Post route
+$routes->get('post/(:any)', 'Home::post/$1');
+$routes->get('posts/category/(:any)', 'Home::category_post/$1');
 
 $routes->group('', ['namespace' => 'App\Controllers'], function($routes) {
 	// Registration
@@ -71,7 +73,16 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin',"filter" => "aut
 	// ADMIN DASHBOARD
 	$routes->get('dashboard', 'Admin::index',['as'=>'dashboard']);
 	$routes->get('users', 'Admin::users',['as'=>'users']);
+	// User payment route
 	$routes->get('payments', 'Admin::payments',['as'=>'payments']);
+	// Post Route
+	$routes->get('post/create', 'Post::create',['as'=>'create']);
+	$routes->get('post/category/create', 'Post::create_category',['as'=>'create_category']);
+	$routes->post('post/category/save', 'Post::store_category',['as'=>'store_category']);
+	$routes->get('post/index', 'Post::index',['as'=>'index']);
+	$routes->post('post/save', 'Post::save',['as'=>'save']);
+	$routes->get('post/edit/(:any)', 'Post::edit/$1');
+	$routes->post('post/update_post/(:any)', 'Post::update_post/$1',['as'=>'update_post']);
 
   });
 
