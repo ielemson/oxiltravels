@@ -43,14 +43,14 @@
                                                     <option value="2">Unpublish</option>
                                                 </select>
                                                 <div class="valid-feedback">Looks good!</div>
-                                                <div class="invalid-feedback">Please select a status.</div>
+                                                <div class="invalid-feedback">Please select post status.</div>
                                             </div>
                                         </div>
                                             <div class="mb-3 col-md-12">
                                                 <label for="post" class="form-label">Post content</label>
                                                 <textarea id="summernote" class="form-control" name="content" required placeholder="post content"></textarea>
                                                 <div class="valid-feedback">Looks good!</div>
-                                                <div class="invalid-feedback">Please select a State.</div>
+                                                <div class="invalid-feedback">Post content is required.</div>
                                             </div>
 
                                            <div class="row g-2">
@@ -58,7 +58,7 @@
                                                 <label for="file" class="form-label">Post image</label>
                                                 <input type="file" class="form-control" name="img" required>
                                                  <div class="valid-feedback">Looks good!</div>
-                                                <div class="invalid-feedback">Please enter your post title.</div>
+                                                <div class="invalid-feedback">Please select post image.</div>
                                             </div>
                                             <div class="mb-3 col-md-6">
                                                 <label for="status" class="form-label">Post Category</label>
@@ -71,11 +71,11 @@
                                                         <?php endif; ?>
                                                 </select>
                                                 <div class="valid-feedback">Looks good!</div>
-                                                <div class="invalid-feedback">Please select a status.</div>
+                                                <div class="invalid-feedback">Please select post category.</div>
                                             </div>
                                            </div>
                                             <div class="mb-3 col-md-12">
-                                            <button type="submit" class="btn btn-primary btn-block"><i class="fas fa-save"></i> Post</button>
+                                            <button type="submit" class="btn btn-primary btn-block"><i class="fas fa-save"></i> Create Post</button>
                                            </div>
                                         </div>
                                 

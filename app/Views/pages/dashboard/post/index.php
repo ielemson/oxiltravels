@@ -40,7 +40,18 @@
                             
                         </div>
                         <?php endforeach;?>
-                        <?php endif; ?>
+                        <?php else: ?>
+                            <div class="col-md-12 col-lg-12">
+                            <div class="card">
+                                <div class="card-header">Notification Alerts</div>
+                                <div class="card-body">
+                                    <p class="card-title"></p>
+                                    <div class="alert alert-danger" role="alert">No post to display</div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <?php endif;?>
                     </div>
         </div>
     </div>
@@ -50,16 +61,31 @@
 
 <?=$this->section('extra_js');?>
 <script>
-
-
 $( ".delete" ).click(function() {
- 
+ var attr = $(this).attr("data-id");
     $.confirm({
     title: 'Confirm!',
-    content: 'Simple confirm!'+$(this).attr("data-id"),
+    content: 'Delete Post?',
     buttons: {
         confirm: function () {
-            $.alert('Confirmed!');
+            // let num = $(this).attr("data-id")
+            var id = {'id': attr}
+            $.ajax({
+                url: "<?=base_url('admin/post/destroy')?>",
+                type: "POST",
+                data: id,
+                dataType: "json",
+                success: function(res) {
+                 if(res.success == true){
+                    $.alert('Post removed');
+                    setTimeout(function(){
+                    window.location.href="<?=base_url('admin/post/index')?>"
+                    }, 2000);
+                 }else{
+                    $.alert('Error!');
+                 }
+                }
+            });
         },
         cancel: function () {
             $.alert('Canceled!');

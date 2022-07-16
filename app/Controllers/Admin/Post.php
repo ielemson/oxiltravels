@@ -3,7 +3,7 @@
 namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
-use App\Models\Post as ModalPost;
+use App\Models\Post as ModelPost;
 use App\Models\PostCategory;
 
 
@@ -11,7 +11,7 @@ class Post extends BaseController
 {
     public function index()
     {
-        $posts = new ModalPost();
+        $posts = new ModelPost();
         $data['posts'] = $posts->findAll();
         return view('pages/dashboard/post/index',$data);
     }
@@ -28,7 +28,7 @@ class Post extends BaseController
 
         helper(['form', 'url','text']);
 	
-        $post = new ModalPost();
+        $post = new ModelPost();
 
        
         if($this->request && $this->validate([
@@ -66,7 +66,9 @@ class Post extends BaseController
     }
 
     public function create_category(){
-        return view('pages/dashboard/category/create');
+        $categories = new PostCategory();
+        $data['categories'] = $categories->findAll();
+        return view('pages/dashboard/category/create',$data);
     }
 
     public function store_category(){
@@ -93,8 +95,49 @@ class Post extends BaseController
             }
     }
 
+    public function category_update(){
+            $category = new PostCategory();
+
+            $data = [
+                'name'          	=> $this->request->getPost('name'),
+               
+            ];
+
+            $category->update($this->request->getPost('id'),$data);
+
+            $data = [
+                'success' => true,
+            ];
+            return $this->response->setJSON($data);
+        }
+    
+ 
+        public function category_destroy(){
+
+            $postModel = new ModelPost();
+
+            $post = $postModel->where('category_id',$this->request->getPost('id'))->first();
+            
+            if(!empty($post)){
+                $data = [
+                    'error' => true,
+                ];
+                return $this->response->setJSON($data);   
+            }else{
+            $categoryModel = new PostCategory();
+
+            $categoryModel->where('id', $this->request->getPost('id'))->delete($this->request->getPost('id'));
+            $data = [
+                'success' => true,
+            ];
+            return $this->response->setJSON($data);
+
+            }
+            
+        }
+
     public function edit($id){
-        $post = new ModalPost();
+        $post = new ModelPost();
         $categories = new PostCategory();
         $data['categories'] = $categories->findAll();
         $data['post'] = $post->where('id',$id)->first();
@@ -103,7 +146,7 @@ class Post extends BaseController
     }
 
     public function update_post($id){
-       $post = new ModalPost();
+       $post = new ModelPost();
        $data['post'] = $post->where('id',$id)->first();
 
        if($this->request && $this->validate([
@@ -118,7 +161,7 @@ class Post extends BaseController
 
             
 
-            if(!empty($_FILES['file']['img'])){
+            if(!empty($this->request->getFile('img'))){
 
                 $file = $this->request->getFile('img');
 
@@ -139,7 +182,7 @@ class Post extends BaseController
                 'slug'  => url_title($this->request->getPost('title'), '-', true),
                
             ];
-                     $post->update($id,$data);
+                    $post->update($id,$data);
             }else{
 
                 $data = [
@@ -162,5 +205,25 @@ class Post extends BaseController
            return redirect()->back()->withInput()->with('errors', $post->errors());
         }
 
+    }
+
+    
+    public function destroy(){
+
+        $postModel = new ModelPost();
+
+        $data['post'] = $postModel->where('id', $this->request->getPost('id'))->first();
+        $folder = 'frontend/images/post';
+        if(file_exists($folder.'/'.$data['post']['file'])) {
+            unlink($folder.'/'.$data['post']['file']);
+            $postModel->where('id', $this->request->getPost('id'))->delete($this->request->getPost('id'));
+            //deleting from the database
+        } 
+        $data = [
+            'success' => true,
+            'msg'  => "Post removed",
+        ];
+        
+        return $this->response->setJSON($data);
     }
 }

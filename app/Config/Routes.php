@@ -78,11 +78,14 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin',"filter" => "aut
 	// Post Route
 	$routes->get('post/create', 'Post::create',['as'=>'create']);
 	$routes->get('post/category/create', 'Post::create_category',['as'=>'create_category']);
+	$routes->post('post/category/update', 'Post::category_update',['as'=>'category_update']);
+	$routes->post('post/category/destroy', 'Post::category_destroy',['as'=>'category_destroy']);
 	$routes->post('post/category/save', 'Post::store_category',['as'=>'store_category']);
 	$routes->get('post/index', 'Post::index',['as'=>'index']);
 	$routes->post('post/save', 'Post::save',['as'=>'save']);
 	$routes->get('post/edit/(:any)', 'Post::edit/$1');
 	$routes->post('post/update_post/(:any)', 'Post::update_post/$1',['as'=>'update_post']);
+	$routes->post('post/destroy', 'Post::destroy');
 
   });
 

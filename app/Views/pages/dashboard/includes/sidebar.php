@@ -8,6 +8,9 @@
                 </li>
            
                 <li>
+                    <a href="<?=base_url('admin/users')?>"><i class="fas fa-bullhorn"></i>Announcement</a>
+                </li>
+                <li>
                     <a href="<?=base_url('admin/users')?>"><i class="fas fa-user-friends"></i>Users</a>
                 </li>
                 <li>
