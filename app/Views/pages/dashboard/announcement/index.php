@@ -34,7 +34,7 @@
                                 <div class="card-footer text-end btn-group">
                                     <a href="<?= base_url('admin/announcement/edit/' . $announcement['id']) ?>" class="btn btn-info btn-sm text-black"><i class="fa fa-edit"></i></a>
                                     <button data-id="<?= $announcement['id']; ?>" class="delete btn btn-danger btn-sm text-black"><i class="fa fa-trash"></i></button>
-                                    <button data-content="<?= $announcement['announcement'];?>" data-file="<?= $announcement['img'];?>" data-title="<?= $announcement['title'];  ?>" class="viewContent btn btn-primary btn-sm text-black"><i class="fa fa-eye"></i></button>
+                                    <button data-content="<?= $announcement['announcement']; ?>" data-file="<?= $announcement['img']; ?>" data-title="<?= $announcement['title'];  ?>" class="viewContent btn btn-primary btn-sm text-black"><i class="fa fa-eye"></i></button>
                                 </div>
                             </div>
 
@@ -104,10 +104,10 @@
         var title = $(this).attr("data-title");
         var img = $(this).attr("data-file");
         $.dialog({
-    type: 'blue',
-    title: `<h5>${title.toLocaleUpperCase()}</h5>`,
-    content: `<p>${content}</p> <br/> <img src="/frontend/images/announcements/${img}"/>`,
-});
+            type: 'blue',
+            title: `<h5>${title.toLocaleUpperCase()}</h5>`,
+            content: `<p>${content}</p> <br/> <img src="/frontend/images/announcements/${img}"/>`,
+        });
     });
 </script>
 <?= $this->endSection(); ?>

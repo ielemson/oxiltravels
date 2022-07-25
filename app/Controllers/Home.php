@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\Annoucement;
 use App\Models\Post;
 use App\Models\PostCategory;
 use Config\Services;
@@ -17,11 +18,14 @@ class Home extends BaseController
     }
     public function index()
     {
-     
+        $posts = new Post();
+        $announcement = new Annoucement();
 		$data['title'] = "Home";
 		$data['active_nav_index'] = "active";
-        $posts = new Post();
+       
+        $data['announcement'] = $announcement->where('status', 1)->first();
         $data['posts'] = $posts->where('status', 1)->findAll();
+        // dd($data);
         return view('pages/home',$data);
     }
 

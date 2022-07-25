@@ -19,15 +19,15 @@
                     <div class="tab-pane fade show active" id="tabs-7-1">
                       <p>Oxil travel is a <b>global</b> brand that has been in existence since 2018
                         Oxil travel provides up-to-date information and tips on the latest available tours and opportunities around the globe that all ages can take advantage of and further their personal and professional development.</p>
-                      <div class="group-md group-middle"><a class="button button-secondary button-pipaluk" href="<?=base_url('/')?>">Get in Touch</a><a class="button button-black-outline button-md" href="about.html">Read More</a></div>
+                      <div class="group-md group-middle"><a class="button button-secondary button-pipaluk" href="<?=base_url('/')?>">Get in Touch</a><a class="button button-black-outline button-md" href="<?=base_url('/about')?>">Read More</a></div>
                     </div>
                     <div class="tab-pane fade" id="tabs-7-2">
                       <p>We are always excited to provide you with only the latest and most active programs & Opportunities you can apply for. We’re born to bear your travel burdens.</p>
-                      <div class="group-md group-middle"><a class="button button-secondary button-pipaluk" href="<?=base_url('/')?>">Get in Touch</a><a class="button button-black-outline button-md" href="about.html">Read More</a></div>
+                      <div class="group-md group-middle"><a class="button button-secondary button-pipaluk" href="<?=base_url('/')?>">Get in Touch</a><a class="button button-black-outline button-md" href="<?=base_url('/about')?>">Read More</a></div>
                     </div>
                     <div class="tab-pane fade" id="tabs-7-3">
                       <p>Our mission is to provide the <b>best travel planning experience</b>, while at the same time becoming a one stop shop for all travel services available in the industry..</p>
-                      <div class="group-md group-middle"><a class="button button-secondary button-pipaluk" href="<?=base_url('/')?>">Get in Touch</a><a class="button button-black-outline button-md" href="about.html">Read More</a></div>
+                      <div class="group-md group-middle"><a class="button button-secondary button-pipaluk" href="<?=base_url('/')?>">Get in Touch</a><a class="button button-black-outline button-md" href="<?=base_url('/about')?>">Read More</a></div>
                     </div>
                   </div>
                 </div>

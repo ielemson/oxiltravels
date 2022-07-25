@@ -12,6 +12,8 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7CPoppins:400%7CTeko:300,400">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="<?=base_url('frontend/css/modal.css')?>">
     <link rel="stylesheet" href="<?=base_url('frontend/css/fonts.css')?>">
     <link rel="stylesheet" href="<?=base_url('frontend/css/style.css')?>">
         <!-- ========================= SECTION CSS  ========================= -->
@@ -49,6 +51,9 @@
     <script src="<?=base_url('frontend/js/script.js')?>"></script>
     <script src="<?=base_url('frontend/js/lib/jquery.validate.js')?>"></script>
     <script src="<?=base_url('frontend/js/moment.js')?>"></script>
+    <script src="<?=base_url('frontend/js/modal.js')?>"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.ui.min.js'></script>
     <!-- ========================= SECTION JS  ========================= -->
     <?= $this->renderSection('extra-js'); ?>
     <!-- ========================= SECTION JS END ===================== -->

@@ -89,6 +89,9 @@
       <!-- Latest blog posts-->
       <?=$this->include('includes/blogs');?>
       <!--	Instagrram wondertour-->
+      <!-- announcement page-->
+      <?=$this->include('includes/announcement');?>
+      <!--announcement page--->
     
 <?= $this->endSection(); ?>
  <!-- Page Header-->
