@@ -1,10 +1,10 @@
 <?= $this->extend('layouts/dashboardLayout'); ?>
 
 <?= $this->section('content'); ?>
-<?= $this->include('pages/dashboard/includes/nav_bar'); ?>
+<?= $this->include('pages/customer/includes/sidebar'); ?>
         <div id="body" class="active">
             <!-- navbar navigation component -->
-           <?= $this->include('pages/dashboard/includes/navbar')?>
+           <?= $this->include('pages/customer/includes/navbar')?>
             <!-- end of navbar navigation -->
             <div class="content">
                 <div class="container">

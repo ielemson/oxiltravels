@@ -46,25 +46,21 @@ $routes->get('contact', 'Home::contact');
 $routes->get('post/(:any)', 'Home::post/$1');
 $routes->get('posts/category/(:any)', 'Home::category_post/$1');
 
-$routes->group('', ['namespace' => 'App\Controllers'], function ($routes) {
+
+// General Controller :: No Auth 
+$routes->group('auth', ['namespace' => 'App\Controllers'], function ($routes) {
 	// Registration
-	$routes->get('register', 'Auth\Register::index');
-	$routes->post('register', 'Auth\Register::save', ['as' => 'register']);
+	// $routes->get('register', 'Auth\Register::index');
+	// $routes->post('register', 'Auth\Register::save', ['as' => 'register']);
 
-	// Login
+	// Admin Authentication
 	$routes->get('admin/login', 'Auth\Login::index');
-	$routes->post('login', 'Auth\Login::login');
-});
+	$routes->post('admin/login', 'Auth\Login::login');
 
-$routes->group('customer', ['namespace' => 'App\Controllers'], function ($routes) {
-	//Customer Registration
-	$routes->get('payment', 'Customer\Register::index', ['as' => 'signup']);
-	$routes->post('payment/store', 'Customer\Register::store', ['as' => 'store']);
-	// $routes->get('register/(:num)', 'Register::index/$1');
-
-	// Login
-	$routes->get('customer/login', 'Auth\Login::index');
-	$routes->post('login', 'Auth\Login::login');
+	// Customer Authentication
+	$routes->get('user/register', 'Customer\Register::index');
+	$routes->get('user/login', 'Customer\Login::index');
+	$routes->post('user/login', 'Customer\Login::login');
 });
 
 
@@ -100,19 +96,16 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin', "filter" => "au
 });
 
 
-$routes->group('customer', ['namespace' => 'App\Controllers\Customer', "filter" => "auth"], function ($routes) {
-
-	// Customer DASHBOARD
-	$routes->get('dashboard', 'Customer::index', ['as' => 'customer']);
-
-	// $routes->get('users', 'Admin::users',['as'=>'users']);
-
+// Customer Route 
+$routes->group('user', ['namespace' => 'App\Controllers\Customer', "filter" => "auth"], function ($routes) {
+	$routes->get('dashboard', 'Dashboard::index');
 });
 
 $routes->group('', ['namespace' => 'App\Controllers', "filter" => "auth"], function ($routes) {
 
 	// ADMIN DASHBOARD
 	$routes->get('logout', 'Auth\Login::logout');
+	$routes->get('user/logout', 'Auth\Login::userLogout');
 });
 
 

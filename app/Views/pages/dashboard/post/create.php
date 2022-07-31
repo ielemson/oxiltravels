@@ -12,8 +12,8 @@
 <?= $this->include('includes/alerts'); ?>
 </div>
                      <div class="page-title">
-                            <h3>Users
-                                   <a href="<?=base_url('admin/dashboard')?>" class="btn btn-sm btn-outline-primary float-end"><i class="fas fa-user"></i> Dashboard</a>
+                            <h3>Creat New Post
+                                   <a href="<?=base_url('admin/post/index')?>" class="btn btn-sm btn-outline-primary float-end"><i class="fas fa-newspaper"></i> All Posts</a>
                             </h3>
                      </div>
                      <div class="box box-primary">

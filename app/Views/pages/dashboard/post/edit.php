@@ -12,19 +12,19 @@
 <?= $this->include('includes/alerts'); ?>
 </div>
                      <div class="page-title">
-                            <h3>Users
-                                   <a href="<?=base_url('admin/dashboard')?>" class="btn btn-sm btn-outline-primary float-end"><i class="fas fa-user"></i> Dashboard</a>
+                            <h3>Post Update
+                                   <a href="<?=base_url('admin/post/index')?>" class="btn btn-sm btn-outline-primary float-end"><i class="fas fa-newspaper"></i> All Posts</a>
                             </h3>
                      </div>
                      <div class="box box-primary">
                             <div class="box-body">
-                                  Create Post
+                                  Edit Post
                             </div>
                      </div>
 
                      <div class="col-lg-12">
                             <div class="card">
-                                <div class="card-header">Create new post</div>
+                                <div class="card-header">Edit Post</div>
                                 <div class="card-body">
                                     <form id="paymentForm" action="<?=base_url('admin/post/update_post/'.$post['id'])?>" class="needs-validation" novalidate method="POST" accept-charset="utf-8" enctype="multipart/form-data">
                                          <?= csrf_field() ?>

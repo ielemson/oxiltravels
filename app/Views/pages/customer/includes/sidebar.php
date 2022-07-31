@@ -66,7 +66,7 @@
                 </li>
                 <div class="dropdown-divider"></div> 
                 <li>
-                    <a href="<?=base_url('logout')?>"><i class="fas fa-sign-out-alt text-danger"></i>Logout</a>
+                    <a href="<?=base_url('user/logout')?>"><i class="fas fa-sign-out-alt text-danger"></i>Logout</a>
                 </li>
             </ul>
     </nav>

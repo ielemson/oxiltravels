@@ -12,7 +12,7 @@
                         <img class="brand" src="<?=base_url('frontend/images/logo-main.png')?>" alt="admin logo">
                     </div>
                     <h6 class="mb-4 text-muted">Login to your dashboard</h6>
-                    <form class="needs-validation" action="<?= base_url('login'); ?>" method="POST" novalidate accept-charset="utf-8">
+                    <form class="needs-validation" action="<?= base_url('auth/admin/login'); ?>" method="POST" novalidate accept-charset="utf-8">
                     <?= csrf_field() ?>
                         <div class="mb-3 text-start">
                             <label for="email" class="form-label">Email adress</label>
@@ -43,7 +43,6 @@
             </div>
         </div>
 <?= $this->endSection(); ?>
-
 
 <?= $this->section('extra_style');?>
 <link href="<?=base_url("dashboard/assets/css/auth.css")?>" rel="stylesheet">

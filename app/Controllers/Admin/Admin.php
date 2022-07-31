@@ -27,7 +27,11 @@ class Admin extends BaseController
     
     public function index()
     {
-        return view('pages/dashboard/welcome');
+        $userModel = new User();
+
+        $data['users'] = $userModel->countAll();
+      
+        return view('pages/dashboard/index',$data);
         // return 'admin';
     }
 

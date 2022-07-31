@@ -35,7 +35,7 @@ class Login extends BaseController
             ];
     
             if (! $this->validate($rules)) {
-                return redirect()->to(base_url('admin/login'))->withInput()->with('errors', $this->validator->getErrors());
+                return redirect()->to(base_url('auth/admin/login'))->withInput()->with('errors', $this->validator->getErrors());
             }
     
             // check credentials
@@ -45,7 +45,7 @@ class Login extends BaseController
             
             if ( is_null($user) || ! password_verify($this->request->getPost('password'), $user['password']) ) 
             {
-                return redirect()->to(base_url('admin/login'))->withInput()->with('error', "invalid user credentials");
+                return redirect()->to(base_url('auth/admin/login'))->withInput()->with('error', "invalid user credentials");
             }
     
               // Stroing session values
@@ -57,7 +57,7 @@ class Login extends BaseController
 
                 }elseif($user['role'] == "customer"){
 
-                return redirect()->to(base_url('customer/dashboard'));
+                return redirect()->to(base_url('user/dashboard'));
 
                 }     
         }
@@ -66,7 +66,7 @@ class Login extends BaseController
         {
             $data = [
                 'id' => $user['id'],
-                'firstname' => $user['name'],
+                'fullname' => $user['name'],
                 'email' => $user['email'],
                 'role' => $user['role'],
                 'isLoggedIn' => true,
@@ -81,7 +81,15 @@ class Login extends BaseController
         
             session()->destroy();
             // return redirect()->to('login');
-            return redirect()->to(base_url('admin/login'));
+            return redirect()->to(base_url('auth/admin/login'));
+        }
+
+        public function userLogout()
+        {
+        
+            session()->destroy();
+            // return redirect()->to('login');
+            return redirect()->to(base_url('auth/user/login'));
         }
 
     }

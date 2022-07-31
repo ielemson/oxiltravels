@@ -33,7 +33,7 @@ class Noauth implements FilterInterface
 			}
 
 			if (session()->get('role') == "customer") {
-				return redirect()->to(base_url('customer/dashboard'));
+				return redirect()->to(base_url('user/dashboard'));
 			}
         }
     }
