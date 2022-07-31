@@ -17,8 +17,6 @@ class Admin extends BaseController
 		$this->session = Services::session();
 
         if (session()->get('role') != "admin") {
-            // echo 'Access denied';
-            // exit;
             return redirect()->to(base_url('admin/login'))->with('error', "access denied");
     }
 

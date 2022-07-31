@@ -59,8 +59,8 @@
                             <li class="rd-nav-item <?= $active_nav_login ?? '' ?>"><a class="rd-nav-link" href="#">Account</a>
                                 <!-- RD Navbar Dropdown-->
                                 <ul class="rd-menu rd-navbar-dropdown">
-                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="<?= base_url('auth/user/login') ?>">Login</a></li>
-                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="<?= base_url('auth/user/register') ?>">Register</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="<?= base_url('auth/login') ?>">Login</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="<?= base_url('auth/register') ?>">Register</a></li>
                                 </ul>
                             </li>
                             <?php endif;?>
@@ -77,7 +77,7 @@
                                         <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="<?= base_url('logout') ?>">Logout</a></li>
                                     </ul>
                                 </li>
-                            <?php else : ?>
+                            <?php elseif(isset($_SESSION['role']) && $_SESSION['role'] == "customer") : ?>
                                 <li class="rd-nav-item"><a class="rd-nav-link" href="#">User</a>
 
                             <ul class="rd-menu rd-navbar-dropdown">

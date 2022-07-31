@@ -15,6 +15,8 @@ class AnnouncementController extends BaseController
         return view('pages/dashboard/announcement/index',$data);
     }
 
+    
+
     public function create_page(){
         return view('pages/dashboard/announcement/create');
     }

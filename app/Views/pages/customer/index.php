@@ -14,319 +14,167 @@
                             <h2 class="page-title">Dashboard</h2>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-sm-6 col-md-6 col-lg-3 mt-3">
-                            <div class="card">
-                                <div class="content">
-                                    <div class="row">
-                                        <div class="col-sm-4">
-                                            <div class="icon-big text-center">
-                                                <i class="teal fas fa-shopping-cart"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <div class="detail">
-                                                <p class="detail-subtitle">New Orders</p>
-                                                <span class="number">6,267</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="footer">
-                                        <hr />
-                                        <div class="stats">
-                                            <i class="fas fa-calendar"></i> For this Week
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-6 col-lg-3 mt-3">
-                            <div class="card">
-                                <div class="content">
-                                    <div class="row">
-                                        <div class="col-sm-4">
-                                            <div class="icon-big text-center">
-                                                <i class="olive fas fa-money-bill-alt"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <div class="detail">
-                                                <p class="detail-subtitle">Revenue</p>
-                                                <span class="number">$180,900</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="footer">
-                                        <hr />
-                                        <div class="stats">
-                                            <i class="fas fa-calendar"></i> For this Month
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-6 col-lg-3 mt-3">
-                            <div class="card">
-                                <div class="content">
-                                    <div class="row">
-                                        <div class="col-sm-4">
-                                            <div class="icon-big text-center">
-                                                <i class="violet fas fa-eye"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <div class="detail">
-                                                <p class="detail-subtitle">Page views</p>
-                                                <span class="number">28,210</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="footer">
-                                        <hr />
-                                        <div class="stats">
-                                            <i class="fas fa-stopwatch"></i> For this Month
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-6 col-lg-3 mt-3">
-                            <div class="card">
-                                <div class="content">
-                                    <div class="row">
-                                        <div class="col-sm-4">
-                                            <div class="icon-big text-center">
-                                                <i class="orange fas fa-envelope"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <div class="detail">
-                                                <p class="detail-subtitle">Support Request</p>
-                                                <span class="number">75</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="footer">
-                                        <hr />
-                                        <div class="stats">
-                                            <i class="fas fa-envelope-open-text"></i> For this week
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="card">
-                                        <div class="content">
-                                            <div class="head">
-                                                <h5 class="mb-0">Traffic Overview</h5>
-                                                <p class="text-muted">Current year website visitor data</p>
-                                            </div>
-                                            <div class="canvas-wrapper">
-                                                <canvas class="chart" id="trafficflow"></canvas>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="card">
-                                        <div class="content">
-                                            <div class="head">
-                                                <h5 class="mb-0">Sales Overview</h5>
-                                                <p class="text-muted">Current year sales data</p>
-                                            </div>
-                                            <div class="canvas-wrapper">
-                                                <canvas class="chart" id="sales"></canvas>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="card">
-                                <div class="content">
-                                    <div class="head">
-                                        <h5 class="mb-0">Top Visitors by Country</h5>
-                                        <p class="text-muted">Current year website visitor data</p>
-                                    </div>
-                                    <div class="canvas-wrapper">
-                                        <table class="table table-striped">
-                                            <thead class="success">
-                                                <tr>
-                                                    <th>Country</th>
-                                                    <th class="text-end">Unique Visitors</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td><i class="flag-icon flag-icon-us"></i> United States</td>
-                                                    <td class="text-end">27,340</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><i class="flag-icon flag-icon-in"></i> India</td>
-                                                    <td class="text-end">21,280</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><i class="flag-icon flag-icon-jp"></i> Japan</td>
-                                                    <td class="text-end">18,210</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><i class="flag-icon flag-icon-gb"></i> United Kingdom</td>
-                                                    <td class="text-end">15,176</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><i class="flag-icon flag-icon-es"></i> Spain</td>
-                                                    <td class="text-end">14,276</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><i class="flag-icon flag-icon-de"></i> Germany</td>
-                                                    <td class="text-end">13,176</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><i class="flag-icon flag-icon-br"></i> Brazil</td>
-                                                    <td class="text-end">12,176</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><i class="flag-icon flag-icon-id"></i> Indonesia</td>
-                                                    <td class="text-end">11,886</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><i class="flag-icon flag-icon-ph"></i> Philippines</td>
-                                                    <td class="text-end">11,509</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><i class="flag-icon flag-icon-nz"></i> New Zealand</td>
-                                                    <td class="text-end">1,700</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="card">
-                                <div class="content">
-                                    <div class="head">
-                                        <h5 class="mb-0">Most Visited Pages</h5>
-                                        <p class="text-muted">Current year website visitor data</p>
-                                    </div>
-                                    <div class="canvas-wrapper">
-                                        <table class="table table-striped">
-                                            <thead class="success">
-                                                <tr>
-                                                    <th>Page Name</th>
-                                                    <th class="text-end">Visitors</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>/about.html <a href="#"><i class="fas fa-link blue"></i></a></td>
-                                                    <td class="text-end">8,340</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>/special-promo.html <a href="#"><i class="fas fa-link blue"></i></a></td>
-                                                    <td class="text-end">7,280</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>/products.html <a href="#"><i class="fas fa-link blue"></i></a></td>
-                                                    <td class="text-end">6,210</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>/documentation.html <a href="#"><i class="fas fa-link blue"></i></a></td>
-                                                    <td class="text-end">5,176</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>/customer-support.html <a href="#"><i class="fas fa-link blue"></i></a></td>
-                                                    <td class="text-end">4,276</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>/index.html <a href="#"><i class="fas fa-link blue"></i></a></td>
-                                                    <td class="text-end">3,176</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>/products-pricing.html <a href="#"><i class="fas fa-link blue"></i></a></td>
-                                                    <td class="text-end">2,176</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>/product-features.html <a href="#"><i class="fas fa-link blue"></i></a></td>
-                                                    <td class="text-end">1,886</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>/contact-us.html <a href="#"><i class="fas fa-link blue"></i></a></td>
-                                                    <td class="text-end">1,509</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>/terms-and-condition.html <a href="#"><i class="fas fa-link blue"></i></a></td>
-                                                    <td class="text-end">1,100</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6 col-md-6 col-lg-3">
-                            <div class="card">
-                                <div class="content">
-                                    <div class="row">
-                                        <div class="dfd text-center">
-                                            <i class="blue large-icon mb-2 fas fa-thumbs-up"></i>
-                                            <h4 class="mb-0">+21,900</h4>
-                                            <p class="text-muted">FACEBOOK PAGE LIKES</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-6 col-lg-3">
-                            <div class="card">
-                                <div class="content">
-                                    <div class="row">
-                                        <div class="dfd text-center">
-                                            <i class="orange large-icon mb-2 fas fa-reply-all"></i>
-                                            <h4 class="mb-0">+22,566</h4>
-                                            <p class="text-muted">INSTAGRAM FOLLOWERS</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-6 col-lg-3">
-                            <div class="card">
-                                <div class="content">
-                                    <div class="row">
-                                        <div class="dfd text-center">
-                                            <i class="grey large-icon mb-2 fas fa-envelope"></i>
-                                            <h4 class="mb-0">+15,566</h4>
-                                            <p class="text-muted">E-MAIL SUBSCRIBERS</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-6 col-lg-3">
-                            <div class="card">
-                                <div class="content">
-                                    <div class="row">
-                                        <div class="dfd text-center">
-                                            <i class="olive large-icon mb-2 fas fa-dollar-sign"></i>
-                                            <h4 class="mb-0">+98,601</h4>
-                                            <p class="text-muted">TOTAL SALES</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?= $this->include('pages/customer/includes/cards'); ?>
+                    <?= $this->include('pages/customer/includes/postCard'); ?>
+                   
                 </div>
             </div>
         </div>
 <?= $this->endSection(); ?>
+
+<?php if (!$biodata): ?>
+
+<?=$this->section('extra_js');?>
+<script>
+$().ready(function(){
+    $.confirm({
+    title: 'Complete Your Profile!',
+    content: '',
+    type: 'red',
+    typeAnimated: true,
+    buttons: {
+      
+        cancel: function () {
+            $.alert('Canceled!');
+        },
+        somethingElse: {
+            text: 'Proceed',
+            btnClass: 'btn-blue',
+            keys: ['enter', 'shift'],
+            action: function(){
+                $.confirm({
+            title: 'Prompt!',
+            row:'row',
+            columnClass: 'col-md-6',
+            content: '' +
+            '<form action="" class="formName">' +
+            '<div class="row">' +
+            '<div class="col-md-6">' +
+            '<div class="form-group">' +
+            '<label>State</label>' +
+            '<input type="text" placeholder="Your state" name="state" class="state form-control" required />' +
+            '</div>' +
+            '</div>' +
+            '<div class="col-md-6">' +
+            '<div class="form-group">' +
+            '<label>Country</label>' +
+            '<input type="text" placeholder="Your country" name="country" class="country form-control" required />' +
+            '</div>' +
+            '</div>' +
+            '<div class="col-md-6">' +
+            '<div class="form-group">' +
+            '<label>DOB</label>' +
+            '<input type="date" placeholder="DOB" name="dob" class="dob form-control" required />' +
+            '</div>' +
+            '</div>' +
+            '<div class="col-md-6">' +
+            '<div class="form-group">' +
+            '<label>Education</label>' +
+            '<input type="text" placeholder="Highest education" name="education" class="education form-control" required />' +
+            '</div>' +
+            '</div>' +
+            '<div class="col-md-6">' +
+            '<div class="form-group">' +
+            '<label>Graduate Yr</label>' +
+            '<input type="text" placeholder="Year Graduate" name="education_yr" class="education_yr form-control" required />' +
+            '</div>' +
+            '</div>' +
+            '<div class="col-md-6">' +
+            '<div class="form-group">' +
+            '<label>Residential Address</label>' +
+            '<textarea type="text" placeholder="Your address" name="address" class="address form-control" required></textarea/>' +
+            '</div>' +
+            '</div>' +
+            '<div class="col-md-6">' +
+            '<div class="form-group">' +
+            '<label>Next of Kin</label>' +
+            '<input type="text" placeholder="Next of Kin" name="nexofkin" class="nexofkin form-control" required />' +
+            '</div>' +
+            '</div>' +
+            '<div class="col-md-6">' +
+            '<div class="form-group">' +
+            '<label>Address of next of kin</label>' +
+            '<textarea type="text" placeholder="Next of kin address" name="nexofkin_address" class="nexofkin_address form-control" required></textarea/>' +
+            '</div>' +
+            '</div>' +
+            '</div>' +
+            '</form>',
+    buttons: {
+        formSubmit: {
+            text: 'Submit',
+            btnClass: 'btn-blue',
+            action: function () {
+                var state = this.$content.find('.state').val();
+                var country = this.$content.find('.country').val();
+                var address = this.$content.find('.address').val();
+                var dob = this.$content.find('.dob').val();
+                var education = this.$content.find('.education').val();
+                var education_yr = this.$content.find('.education_yr').val();
+                var nexofkin = this.$content.find('.nexofkin').val();
+                var nexofkin_address = this.$content.find('.nexofkin_address').val();
+                if(!state || !country || !address || !dob || !nexofkin || !nexofkin_address || !education_yr || !education){
+                    $.alert('provide a valid input');
+                    return false;
+                }
+                
+                var biodata = {
+                     'state':state,
+                     'country':country,
+                     'address':address,
+                     'dob':dob,
+                     'nexofkin_address':nexofkin_address,
+                     'nexofkin':nexofkin,
+                     'education':education,
+                     'education_yr':education_yr,
+                   }
+                $.ajax({
+                url: "<?=base_url('user/biodata/update')?>",
+                type: "POST",
+                data: biodata,
+                dataType: "json",
+                success: function(res) {
+                 if(res.success == true){
+              //       setTimeout(function(){
+                    // window.location.reload()
+              //       }, 2000);
+              $.confirm({
+                title:'Your profile has been updated',
+                     content: '',
+                            icon: 'fa fa-smile-o',
+                            theme: 'modern',
+                            closeIcon: true,
+                            animation: 'scale',
+                            type: 'green',
+                        });
+
+                 }else{
+                    $.alert('Error!');
+                 }
+                }
+            });
+            }
+        },
+        cancel: function () {
+            //close
+        },
+    },
+    onContentReady: function () {
+        // bind to events
+        var jc = this;
+        this.$content.find('form').on('submit', function (e) {
+            // if the user submits the form by pressing enter in the field.
+            e.preventDefault();
+            jc.$formSubmit.trigger('click'); // reference the button and click it
+        });
+    }
+});
+            }
+        }
+    }
+});
+   
+})
+</script>
+<?=$this->endSection();?>
+
+<?php endif; ?>

@@ -3,6 +3,7 @@
 namespace App\Controllers\Auth;
 
 use App\Controllers\BaseController;
+use App\Models\BioData;
 use App\Models\User;
 use Config\Services;
 
@@ -24,7 +25,13 @@ class Login extends BaseController
 
     public function index()
     {
-        return view('pages/auth/login');
+        $data['title'] = "Login";
+        $data['title_1'] = "Login Here";
+        $data['title_2'] = "Login";
+		$data['banner_img'] = "register.jpg";
+		$data['active_nav_login'] = "active";
+
+        return view('pages/auth/login',$data);
     }
    
     public function login()
@@ -35,7 +42,7 @@ class Login extends BaseController
             ];
     
             if (! $this->validate($rules)) {
-                return redirect()->to(base_url('auth/admin/login'))->withInput()->with('errors', $this->validator->getErrors());
+                return redirect()->to(base_url('auth/login'))->withInput()->with('errors', $this->validator->getErrors());
             }
     
             // check credentials
@@ -45,7 +52,7 @@ class Login extends BaseController
             
             if ( is_null($user) || ! password_verify($this->request->getPost('password'), $user['password']) ) 
             {
-                return redirect()->to(base_url('auth/admin/login'))->withInput()->with('error', "invalid user credentials");
+                return redirect()->to(base_url('auth/login'))->withInput()->with('error', "invalid user credentials");
             }
     
               // Stroing session values
@@ -58,6 +65,7 @@ class Login extends BaseController
                 }elseif($user['role'] == "customer"){
 
                 return redirect()->to(base_url('user/dashboard'));
+                //   return view('pages/customer/index',$data);
 
                 }     
         }
@@ -81,15 +89,9 @@ class Login extends BaseController
         
             session()->destroy();
             // return redirect()->to('login');
-            return redirect()->to(base_url('auth/admin/login'));
+            return redirect()->to(base_url('auth/login'));
         }
 
-        public function userLogout()
-        {
-        
-            session()->destroy();
-            // return redirect()->to('login');
-            return redirect()->to(base_url('auth/user/login'));
-        }
+       
 
     }

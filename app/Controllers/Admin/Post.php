@@ -103,7 +103,7 @@ class Post extends BaseController
         $category = new PostCategory();
 
         $data = [
-            'name'              => $this->request->getPost('name'),
+            'name' => $this->request->getPost('name'),
 
         ];
 
@@ -164,7 +164,6 @@ class Post extends BaseController
             'content'  => 'required',
 
         ])) {
-
 
 
             if($this->request->getFile('img')->isValid()){

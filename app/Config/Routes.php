@@ -49,18 +49,15 @@ $routes->get('posts/category/(:any)', 'Home::category_post/$1');
 
 // General Controller :: No Auth 
 $routes->group('auth', ['namespace' => 'App\Controllers'], function ($routes) {
-	// Registration
-	// $routes->get('register', 'Auth\Register::index');
-	// $routes->post('register', 'Auth\Register::save', ['as' => 'register']);
+	// Registration 
+	$routes->get('register', 'Auth\Register::index');
+	$routes->post('register', 'Auth\Register::register');
 
-	// Admin Authentication
-	$routes->get('admin/login', 'Auth\Login::index');
-	$routes->post('admin/login', 'Auth\Login::login');
 
-	// Customer Authentication
-	$routes->get('user/register', 'Customer\Register::index');
-	$routes->get('user/login', 'Customer\Login::index');
-	$routes->post('user/login', 'Customer\Login::login');
+	//Login
+	$routes->get('login', 'Auth\Login::index');
+	$routes->post('login', 'Auth\Login::login');
+
 });
 
 
@@ -79,7 +76,7 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin', "filter" => "au
 	$routes->post('post/category/update', 'Post::category_update', ['as' => 'category_update']);
 	$routes->post('post/category/destroy', 'Post::category_destroy', ['as' => 'category_destroy']);
 	$routes->post('post/category/save', 'Post::store_category', ['as' => 'store_category']);
-	$routes->get('post/index', 'Post::index', ['as' => 'index']);
+	$routes->get('post', 'Post::index', ['as' => 'index']);
 	$routes->post('post/save', 'Post::post_store', ['as' => 'post_store']);
 	$routes->get('post/edit/(:any)', 'Post::edit/$1');
 	$routes->post('post/update_post/(:any)', 'Post::update_post/$1', ['as' => 'update_post']);
@@ -99,6 +96,8 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin', "filter" => "au
 // Customer Route 
 $routes->group('user', ['namespace' => 'App\Controllers\Customer', "filter" => "auth"], function ($routes) {
 	$routes->get('dashboard', 'Dashboard::index');
+	$routes->post('biodata/update', 'Dashboard::update_biodata');
+	$routes->get('announcement', 'Dashboard::announcement');
 });
 
 $routes->group('', ['namespace' => 'App\Controllers', "filter" => "auth"], function ($routes) {
