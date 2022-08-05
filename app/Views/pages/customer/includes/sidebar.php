@@ -1,6 +1,6 @@
 <nav id="sidebar" class="active">
             <div class="sidebar-header">
-                <img src="<?=base_url('frontend/images/logo-main.png')?>" alt="bootraper logo" class="app-logo">
+                <img src="<?=base_url('frontend/images/oxil-global.png')?>" alt="oxyl global logo" class="app-logo">
             </div>
             <ul class="list-unstyled components text-secondary">
                 <li>

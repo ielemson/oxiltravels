@@ -62,7 +62,7 @@ The good thing is, whether you get an admission or a job, you win!</p>
             <article class="thumbnail thumbnail-mary">
               <div class="thumbnail-mary-figure"><img src="<?=base_url('frontend/images/gallery-image-11-420x308.jpg')?>" alt="" width="420" height="308"/>
               </div>
-              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href=" <?=base_url('frontend/images/gallery-image-11-1200x800-original.jpg')?>" data-lightgallery="item"><img src="images/gallery-image-11-420x308.jpg" alt="" width="420" height="308"/></a>
+              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href=" <?=base_url('frontend/images/gallery-image-11-420x308.jpg')?>" data-lightgallery="item"><img src="images/gallery-image-11-420x308.jpg" alt="" width="420" height="308"/></a>
               </div>
             </article>
             <div class="thumbnail-mary-description">
@@ -77,7 +77,7 @@ The good thing is, whether you get an admission or a job, you win!</p>
             <article class="thumbnail thumbnail-mary">
               <div class="thumbnail-mary-figure"><img src="<?=base_url('frontend/images/gallery-image-13-420x308.jpg')?>" alt="" width="420" height="308"/>
               </div>
-              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="<?=base_url('frontend/images/gallery-image-13-1200x800-original.jpg')?>" data-lightgallery="item"><img src="images/gallery-image-13-420x308.jpg" alt="" width="420" height="308"/></a>
+              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="<?=base_url('frontend/images/gallery-image-13-420x308.jpg')?>" data-lightgallery="item"><img src="images/gallery-image-13-420x308.jpg" alt="" width="420" height="308"/></a>
               </div>
             </article>
             <div class="thumbnail-mary-description">

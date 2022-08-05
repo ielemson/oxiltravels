@@ -9,7 +9,7 @@
             <div class="card">
                 <div class="card-body text-center">
                     <div class="mb-4">
-                        <img class="brand" src="<?=base_url('frontend/images/logo-main.png')?>" alt="admin logo">
+                        <img class="brand" src="<?=base_url('frontend/images/oxil-global.png')?>" alt="admin logo">
                     </div>
                     <h6 class="mb-4 text-muted">Login to your dashboard</h6>
                     <form class="needs-validation" action="<?= base_url('auth/admin/login'); ?>" method="POST" novalidate accept-charset="utf-8">

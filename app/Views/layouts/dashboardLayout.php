@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Dashboard | Oxil Travels</title>
+    <title>Dashboard | Oxly Global Travels</title>
     <link rel="icon" href="<?=base_url('frontend/images/favicon.png')?>" type="image/x-icon">
     <link href="<?=base_url("dashboard/assets/fontawesome/css/fontawesome.min.css")?>" rel="stylesheet">
     <link href="<?=base_url("dashboard/assets/fontawesome/css/solid.min.css")?>" rel="stylesheet">

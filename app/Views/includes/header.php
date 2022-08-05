@@ -10,7 +10,7 @@
                         <!-- RD Navbar Toggle-->
                         <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                         <!-- RD Navbar Brand-->
-                        <div class="rd-navbar-brand"><a class="brand" href="<?= base_url('/') ?>"><img src="<?= base_url('frontend/images/logo-main.png') ?>" alt="" width="188" height="19" /></a></div>
+                        <div class="rd-navbar-brand"><a class="brand" href="<?= base_url('/') ?>"><img src="<?= base_url('frontend/images/oxil-global.png') ?>" alt="" width="188" height="19" /></a></div>
                     </div>
                     <div class="rd-navbar-aside-right rd-navbar-collapse">
                         <ul class="rd-navbar-corporate-contacts">

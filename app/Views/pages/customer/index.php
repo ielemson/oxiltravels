@@ -15,6 +15,10 @@
                         </div>
                     </div>
                     <?= $this->include('pages/customer/includes/cards'); ?>
+
+                    <div class="col-md-12">
+                    <?= $this->include('pages/customer/includes/announcement'); ?>
+                    </div>
                     <?= $this->include('pages/customer/includes/postCard'); ?>
                    
                 </div>
