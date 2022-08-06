@@ -14,12 +14,11 @@
                             <h2 class="page-title">Dashboard</h2>
                         </div>
                     </div>
-                    <?= $this->include('pages/customer/includes/cards'); ?>
-
-                    <div class="col-md-12">
+              
+                    <?= $this->include('pages/customer/includes/cards'); ?>      
                     <?= $this->include('pages/customer/includes/announcement'); ?>
-                    </div>
                     <?= $this->include('pages/customer/includes/postCard'); ?>
+                    <?= $this->include('pages/customer/programs/index'); ?>
                    
                 </div>
             </div>

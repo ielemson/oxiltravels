@@ -7,14 +7,14 @@
                     <a href="<?=base_url('user/dashboard')?>"><i class="fas fa-home"></i> Dashboard</a>
                 </li>
 
-                <div class="dropdown-divider"></div>
-                <li>
-                <a href="<?=base_url('user/dashboard/announcement')?>"><i class="fas fa-info-circle"></i>Announcements</a>
-                </li>
+                <!-- <div class="dropdown-divider"></div> -->
+                <!-- <li>
+                <a href="<?=base_url('user/announcement')?>"><i class="fas fa-info-circle"></i>Announcements</a>
+                </li> -->
                 
                 <div class="dropdown-divider"></div> 
                 <li>
-                    <a href="<?=base_url('admin/payments')?>"><i class="fas fa-cog"></i>Payments</a>
+                    <a href="<?=base_url('user/payments')?>"><i class="fas fa-cog"></i>Payments</a>
                 </li>
                 <div class="dropdown-divider"></div> 
                 <li>

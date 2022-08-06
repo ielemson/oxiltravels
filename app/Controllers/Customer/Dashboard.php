@@ -5,6 +5,7 @@ namespace App\Controllers\Customer;
 use App\Controllers\BaseController;
 use App\Models\Annoucement;
 use App\Models\BioData;
+use App\Models\Payment;
 use App\Models\Post;
 use Config\Services;
 
@@ -69,4 +70,12 @@ class Dashboard extends BaseController
         $data['announcements'] = $announcements->findAll();
         return view('pages/dashboard/announcement/index',$data);
     }
+
+   public function payments(){
+    $payments = new Payment();
+
+    $data['payments'] = $payments->where('user_id',session()->get('id'))->findAll();
+
+    return view('pages/customer/payment/index',$data);
+   }
 }

@@ -98,6 +98,7 @@ $routes->group('user', ['namespace' => 'App\Controllers\Customer', "filter" => "
 	$routes->get('dashboard', 'Dashboard::index');
 	$routes->post('biodata/update', 'Dashboard::update_biodata');
 	$routes->get('announcement', 'Dashboard::announcement');
+	$routes->get('payments', 'Dashboard::payments');
 });
 
 $routes->group('', ['namespace' => 'App\Controllers', "filter" => "auth"], function ($routes) {
