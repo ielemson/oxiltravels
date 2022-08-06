@@ -14,7 +14,7 @@
                                     <p class="card-text">
                                     <?=substr($post['content'],0,100)?>
                                     </p> 
-                                    <p class="card-text"><small class="text-muted"><?=  date("M-Y", strtotime($post['created_at']));?></small></p>
+                                    <p class="card-text"><small class="text-muted"><?=date("M-Y", strtotime($post['created_at']));?></small></p>
                                       <a href="<?= base_url('post/'.$post['slug']);?>" class="btn btn-primary" target="_blank">Read More</a>
                                    </div>
                             </div>

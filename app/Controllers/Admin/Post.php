@@ -104,7 +104,6 @@ class Post extends BaseController
 
         $data = [
             'name' => $this->request->getPost('name'),
-
         ];
 
         $category->update($this->request->getPost('id'), $data);

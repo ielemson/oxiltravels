@@ -23,15 +23,15 @@
                 <!-- Tab panes-->
                 <div class="tab-content">
                   <div class="tab-pane fade show active" id="tabs-4-1">
-                    <p>Oxil travel is a global brand that has been in existence since 2018
-                      Oxil travel provides up-to-date information and tips on the latest available tours and opportunities around the globe that all ages can take advantage of and further their personal and professional development.
+                    <p>Oxyl Global is a global brand that has been in existence since 2018
+                      Oxyl Global provides up-to-date information and tips on the latest available tours and opportunities around the globe that all ages can take advantage of and further their personal and professional development.
                     </p>
                     <!-- Linear progress bar-->
                    
                   </div>
                   <div class="tab-pane fade" id="tabs-4-2">
                     <div class="row row-40 justify-content-center text-center inset-top-10">
-                      <p>Why visit Oxil travel?
+                      <p>Why visit Oxyl Global?
                     We’re always excited to provide you with only the latest and most active programs & Opportunities you can apply for. We’re born to bear your travel burdens</p>
                     </div>
                     <div class="group-md group-middle"><a class="button button-width-xl-230 button-primary button-pipaluk" href="#">Get in touch</a><a class="button button-black-outline button-width-xl-230" href="#">Read more</a></div>

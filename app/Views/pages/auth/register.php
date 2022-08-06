@@ -35,14 +35,14 @@
 
                     </div>
                 </div>
-                <div class="col-md-6">
+                <!-- <div class="col-md-6">
                     <div class="form-wrap">
                         <label class="" for="phone">Phone with country code</label>
                         <input class="form-input" id="phone" type="tel" name="phone">
 
                     </div>
-                </div>
-                <div class="col-md-6">
+                </div> -->
+                <!-- <div class="col-md-6">
                     <div class="form-wrap">
                         <label class="" for="gender">Gender</label>
                         <select class="form-input" id="gender" type="text" name="gender">
@@ -52,7 +52,7 @@
                         </select>
 
                     </div>
-                </div>
+                </div> -->
                 <!-- <div class="col-md-6">
                     <div class="form-wrap">
                         <label class="" for="dob">Date of Birth</label>

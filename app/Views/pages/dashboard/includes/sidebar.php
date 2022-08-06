@@ -1,6 +1,6 @@
 <nav id="sidebar" class="active">
             <div class="sidebar-header">
-                <img src="<?=base_url('frontend/images/oxil-global.png')?>" alt="bootraper logo" class="app-logo">
+                <img src="<?=base_url('frontend/images/oxil-global.png')?>" alt="logo" class="app-logo">
             </div>
             <ul class="list-unstyled components text-secondary">
                 <li>
@@ -24,7 +24,21 @@
                         
                     </ul>
                 </li>
- <div class="dropdown-divider"></div>
+                <div class="dropdown-divider"></div>
+                <li>
+                    <a href="#program" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down"><i class="fas fa-th-list"></i>Programs</a>
+                    <ul class="collapse list-unstyled" id="program">
+                        <li>
+                            <a href="<?=base_url('admin/programs/create')?>"><i class="fas fa-file"></i>Create Program</a>
+                        </li>
+                       
+                        <li>
+                            <a href="<?=base_url('admin/programs/view')?>"><i class="fas fa-info-circle"></i>View Program</a>
+                        </li>
+                        
+                    </ul>
+                </li>
+            <div class="dropdown-divider"></div>
                 <li>
                     <a href="#users" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down"><i class="fas fa-users-cog"></i> Users</a>
                     <ul class="collapse list-unstyled" id="users">
@@ -55,7 +69,7 @@
                             <a href="<?=base_url('admin/post/create')?>"><i class="fas fa-file"></i>Create Post</a>
                         </li>
                         <li>
-                            <a href="<?=base_url('admin/post/index')?>"><i class="fas fa-info-circle"></i>View</a>
+                            <a href="<?=base_url('admin/post')?>"><i class="fas fa-info-circle"></i>View</a>
                         </li>
 
                         <!-- <li>

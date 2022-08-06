@@ -69,6 +69,8 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin', "filter" => "au
 
 	// User payment route
 	$routes->get('payments', 'Admin::payments', ['as' => 'payments']);
+	$routes->get('payment/(:any)', 'Admin::payment/$1');
+	$routes->post('payment/approve', 'Admin::approve_payment');
 
 	// Post  & Category Route
 	$routes->get('post/create', 'Post::create', ['as' => 'create']);
@@ -90,6 +92,11 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin', "filter" => "au
 	$routes->post('announcement/destroy', 'AnnouncementController::delete_annoucement', ['as' => 'delete_annoucement']);
 	$routes->get('announcement/edit/(:any)', 'AnnouncementController::edit_annoucement/$1', ['as' => 'edit_annoucement']);
 	$routes->post('announcement/update/(:any)', 'AnnouncementController::update_annoucement/$1', ['as' => 'update_annoucement']);
+
+	//Prgram Route
+	$routes->get('programs/create', 'ProgramsController::create');
+	$routes->post('programs/store', 'ProgramsController::store');
+
 });
 
 
@@ -99,6 +106,12 @@ $routes->group('user', ['namespace' => 'App\Controllers\Customer', "filter" => "
 	$routes->post('biodata/update', 'Dashboard::update_biodata');
 	$routes->get('announcement', 'Dashboard::announcement');
 	$routes->get('payments', 'Dashboard::payments');
+	$routes->get('settings', 'Dashboard::settings');
+	$routes->get('program/apply/(:any)', 'Dashboard::apply/$1');
+	$routes->post('program/apply', 'Dashboard::apply_program');
+	$routes->get('posts', 'Dashboard::posts');
+	$routes->post('profile/update', 'Dashboard::profile');
+	$routes->post('password/update', 'Dashboard::update_password');
 });
 
 $routes->group('', ['namespace' => 'App\Controllers', "filter" => "auth"], function ($routes) {

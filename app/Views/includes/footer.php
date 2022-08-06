@@ -83,7 +83,7 @@
               </div>
               <div class="col-sm-6 col-md-4 order-sm-first">
                 <!-- Rights-->
-                <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span> <span>Oxil Travel</span>. All rights reserved<span>.</span>
+                <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span> <span>Oxyl Global</span>. All rights reserved<span>.</span>
                 </p>
               </div>
               <div class="col-sm-6 col-md-4 text-md-right">

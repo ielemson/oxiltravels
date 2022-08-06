@@ -4,20 +4,26 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Payment extends Model
+class Program extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'payments';
+    protected $table            = 'programs';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $insertID         = 0;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['user_id','payment_img','payment_for','referral','payment_for_id','cost','status'];
-
+    protected $allowedFields    = ['title','slug','status','start_date','end_date','pricing','price','details','img'];
+    // 'title' => 'required',
+    // 'status' => 'required',
+    // 'start_date' => 'required',
+    // 'end_date' => 'required',
+    // 'pricing'  => 'required',
+    // 'price'  => 'required',
+    // 'details'  => 'required',
     // Dates
-    protected $useTimestamps = true;
+    protected $useTimestamps = false;
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';

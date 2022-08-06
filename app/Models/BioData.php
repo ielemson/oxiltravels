@@ -14,10 +14,10 @@ class BioData extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['user_id','address','state','country','dob','education','education_yr','nexofkin','nexofkin_address','picture'];
+    protected $allowedFields    = ['user_id','address','state','country','dob','education','education_yr','nexofkin','nexofkin_address','picture','phone','gender'];
 
     // Dates
-    protected $useTimestamps = false;
+    protected $useTimestamps = true;
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';

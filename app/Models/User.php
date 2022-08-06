@@ -43,7 +43,7 @@ class User extends Model
     protected $allowCallbacks = true;
     protected $beforeInsert   = ["hashPassword"];
     protected $afterInsert    = ["hashPassword"];
-    protected $beforeUpdate   = [];
+    protected $beforeUpdate   = ['hashPassword'];
     protected $afterUpdate    = [];
     protected $beforeFind     = [];
     protected $afterFind      = [];

@@ -8,13 +8,13 @@
                 </li>
 
                 <!-- <div class="dropdown-divider"></div> -->
-                <!-- <li>
-                <a href="<?=base_url('user/announcement')?>"><i class="fas fa-info-circle"></i>Announcements</a>
-                </li> -->
+                <li>
+                <a href="<?=base_url('user/settings')?>"><i class="fas fa-user-cog"></i>Profile</a>
+                </li>
                 
                 <div class="dropdown-divider"></div> 
                 <li>
-                    <a href="<?=base_url('user/payments')?>"><i class="fas fa-cog"></i>Payments</a>
+                    <a href="<?=base_url('user/payments')?>"><i class="fas fa-money-check"></i>Payments</a>
                 </li>
                 <div class="dropdown-divider"></div> 
                 <li>
@@ -22,12 +22,8 @@
                     <ul class="collapse list-unstyled" id="pagesmenu">
                        
                         <li>
-                            <a href="<?=base_url('admin/post')?>"><i class="fas fa-info-circle"></i>View</a>
+                            <a href="<?=base_url('user/posts')?>"><i class="fas fa-info-circle"></i>View</a>
                         </li>
-
-                        <!-- <li>
-                            <a href="<?=base_url('admin/post/index')?>"><i class="fas fa-exit"></i>Logout</a>
-                        </li> -->
                         
                     </ul>
                 </li>
