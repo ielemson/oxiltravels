@@ -36,7 +36,7 @@
                                         <div class="col-sm-8">
                                             <div class="detail">
                                                 <p class="detail-subtitle">Payment</p>
-                                                <span class="number">$0</span>
+                                                <span class="number">&#x20A6; 0</span>
                                             </div>
                                         </div>
                                     </div>

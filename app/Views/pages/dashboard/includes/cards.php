@@ -36,7 +36,7 @@
                                         <div class="col-sm-8">
                                             <div class="detail">
                                                 <p class="detail-subtitle">Revenue</p>
-                                                <span class="number">$180,900</span>
+                                                <span class="number">&#x20A6; 0</span>
                                             </div>
                                         </div>
                                     </div>
@@ -61,7 +61,7 @@
                                         <div class="col-sm-8">
                                             <div class="detail">
                                                 <p class="detail-subtitle">Page views</p>
-                                                <span class="number">28,210</span>
+                                                <span class="number">0</span>
                                             </div>
                                         </div>
                                     </div>
@@ -86,7 +86,7 @@
                                         <div class="col-sm-8">
                                             <div class="detail">
                                                 <p class="detail-subtitle">Support Request</p>
-                                                <span class="number">75</span>
+                                                <span class="number">0</span>
                                             </div>
                                         </div>
                                     </div>
