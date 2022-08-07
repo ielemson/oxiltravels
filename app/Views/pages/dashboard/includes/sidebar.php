@@ -33,7 +33,7 @@
                         </li>
                        
                         <li>
-                            <a href="<?=base_url('admin/programs/view')?>"><i class="fas fa-info-circle"></i>View Program</a>
+                            <a href="<?=base_url('admin/programs')?>"><i class="fas fa-info-circle"></i>View Program</a>
                         </li>
                         
                     </ul>
@@ -47,7 +47,7 @@
                         </li>
                        
                         <li>
-                            <a href="<?=base_url('admin/announcement')?>"><i class="fas fa-user-plus"></i>Create User</a>
+                            <a href="<?=base_url('admin/user/create')?>"><i class="fas fa-user-plus"></i>Create User</a>
                         </li>
                         
                     </ul>

@@ -36,15 +36,6 @@ class Admin extends BaseController
     }
 
 
-    public function users(){
-
-        $userModel = new User();
-
-        $data['users'] = $userModel->findAll();
-
-        return view('pages/dashboard/users/index',$data);
-    }
-
     public function payments(){
         $payments = new Payment();
 

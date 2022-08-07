@@ -65,7 +65,7 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin', "filter" => "au
 
 	// ADMIN DASHBOARD
 	$routes->get('dashboard', 'Admin::index', ['as' => 'dashboard']);
-	$routes->get('users', 'Admin::users', ['as' => 'users']);
+	// $routes->get('users', 'Admin::users', ['as' => 'users']);
 
 	// User payment route
 	$routes->get('payments', 'Admin::payments', ['as' => 'payments']);
@@ -101,6 +101,13 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin', "filter" => "au
 	$routes->post('program/update', 'ProgramsController::update');
 	$routes->get('program/destroy/(:any)', 'ProgramsController::destroy/$1');
 	
+	// Manage Users
+	$routes->get('users', 'ManageUsers::index');
+	$routes->get('user/create', 'ManageUsers::create');
+	$routes->post('user/store', 'ManageUsers::store');
+	$routes->get('user/edit/(:any)', 'ManageUsers::edit/$1');
+	$routes->post('user/update', 'ManageUsers::update');
+	$routes->post('user/destroy', 'ManageUsers::destroy');
 
 });
 

@@ -9,7 +9,7 @@
        <div class="content">
               <div class="container">
                      <div class="page-title">
-                            <h3>Users
+                            <h3>Createe Post Category
                                    <a href="<?= base_url('admin/dashboard') ?>" class="btn btn-sm btn-outline-primary float-end"><i class="fas fa-user"></i> Dashboard</a>
                             </h3>
                      </div>
