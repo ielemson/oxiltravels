@@ -33,7 +33,7 @@
                         </li>
                        
                         <li>
-                            <a href="<?=base_url('admin/programs/view')?>"><i class="fas fa-info-circle"></i>View Program</a>
+                            <a href="<?=base_url('admin/programs')?>"><i class="fas fa-info-circle"></i>View Program</a>
                         </li>
                         
                     </ul>
