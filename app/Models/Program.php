@@ -14,7 +14,7 @@ class Program extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['title','slug','status','start_date','end_date','pricing','price','details','img'];
+    protected $allowedFields    = ['title','slug','status','start_date','end_date','pricing','price','details','img','bank','account'];
     // 'title' => 'required',
     // 'status' => 'required',
     // 'start_date' => 'required',
@@ -23,7 +23,7 @@ class Program extends Model
     // 'price'  => 'required',
     // 'details'  => 'required',
     // Dates
-    protected $useTimestamps = false;
+    protected $useTimestamps = true;
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';

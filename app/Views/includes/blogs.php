@@ -10,7 +10,7 @@
               <div class="post-aria-footer">
                 <h4 class="post-aria-title"><a href="<?= base_url('post/'.$post['slug']);?>"><?=$post['title']?></a></h4>
                 <div class="post-aria-time">
-                  <time class="date_val" onload="format(<?=$post['created_at']?>)"> <?=  date("M-Y", strtotime($post['created_at']));?>  </time>
+                  <time class="date_val" onload="format(<?=$post['created_at']?>)"> <?= date("M-Y", strtotime($post['created_at']));?>  </time>
                 </div>
                 <ul class="list-inline group-sm post-aria-list-social">
                   <li><a class="icon fa fa-facebook" href="#"></a></li>

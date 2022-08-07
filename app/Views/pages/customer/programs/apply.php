@@ -33,9 +33,9 @@ use App\Models\Program;
                             <?= csrf_field() ?>
                             <div class="col-md-12">
                             <div class="card mb-3">
-                                <img class="card-img-top" src="<?=base_url('frontend/images/programs')?>/<?=$program['img']?>" alt="program image" style="width:100%; height:45vh">
+                                <img class="card-img-top" src="<?=base_url('frontend/images/programs')?>/<?=$program['img']?>" alt="program image" style="width:100%; height:65vh">
                                 <div class="card-body">
-                                    <h5 class="card-title"><?=$program['title']?></h5>
+                                    <h5 class="card-title"><b><?=strtoupper($program['title'])?></b></h5>
                                     <p class="card-text"><?=$program['details']?></p>
                                     <p class="card-text"><b>Cost: &#x20A6; <?= $program['price'] == 0 ? 'Free' : $program['price'] ?></b></p>
                                     <p class="card-text"><b>From : <?=date("M-Y", strtotime($program['start_date']))?> To: <?=date("M-Y", strtotime($program['end_date']))?></b> </p>
@@ -57,13 +57,13 @@ use App\Models\Program;
                         <?php if($program['price'] > 0):?>
                             <div class="row g-2">
                                 <div class="mb-3 col-md-6">
-                                    <label for="file" class="form-label">Uplaod Payment</label>
+                                    <label for="file" class="form-label">Upload Payment</label>
                                     <input type="file" class="form-control" name="img" required>
                                     <input type="hidden" class="form-control" name="pid" value="<?=$program['id']?>">
                                     <input type="hidden" class="form-control" name="ptitle" value="<?=$program['title']?>">
                                     <input type="hidden" class="form-control" name="price" value="<?=$program['price']?>">
                                     <div class="valid-feedback">Looks good!</div>
-                                    <div class="invalid-feedback">Please uplaod payment.</div>
+                                    <div class="invalid-feedback">Please upload payment.</div>
                                 </div>
 
                             </div>
@@ -76,11 +76,12 @@ use App\Models\Program;
                                     <input type="hidden" class="form-control" name="price" value="<?=$program['price']?>">
 
                                     <div class="valid-feedback">Looks good!</div>
-                                    <div class="invalid-feedback">Please uplaod payment.</div>
+                                    <div class="invalid-feedback">Please upload payment.</div>
                                 </div>
                             <?php endif; ?>
-                            <div class="mb-3 col-md-12">
+                            <div class="mb-3 col-md-12 btn-group">
                                 <button type="submit" class="btn btn-primary btn-block"><i class="fas fa-save"></i> Apply</button>
+                                <a href="<?=base_url('user/dashboard')?>" type="submit" class="btn btn-warning btn-block"><i class="fas fa-step-backward"></i> Back</a>
                             </div>
                 
                   

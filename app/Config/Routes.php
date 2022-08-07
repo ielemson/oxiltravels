@@ -94,8 +94,13 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin', "filter" => "au
 	$routes->post('announcement/update/(:any)', 'AnnouncementController::update_annoucement/$1', ['as' => 'update_annoucement']);
 
 	//Prgram Route
+	$routes->get('programs', 'ProgramsController::view');
 	$routes->get('programs/create', 'ProgramsController::create');
 	$routes->post('programs/store', 'ProgramsController::store');
+	$routes->get('program/edit/(:any)', 'ProgramsController::edit/$1');
+	$routes->post('program/update', 'ProgramsController::update');
+	$routes->get('program/destroy/(:any)', 'ProgramsController::destroy/$1');
+	
 
 });
 

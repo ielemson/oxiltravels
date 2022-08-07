@@ -12,13 +12,13 @@
                 <?= $this->include('includes/alerts'); ?>
             </div>
             <div class="page-title">
-                <h3>Programs
+                <h3>Create Programs
                     <a href="<?= base_url('admin/dashboard') ?>" class="btn btn-sm btn-outline-primary float-end"><i class="fas fa-user"></i> Dashboard</a>
                 </h3>
             </div>
             <div class="box box-primary">
                 <div class="box-body">
-                    Create Program
+                <a class="btn btn-sm btn-outline-primary" href="<?=base_url('admin/programs')?>"> View Programs</a>
                 </div>
             </div>
 
@@ -68,7 +68,7 @@
                                     <select name="pricing" id="pricing" class="form-select" required>
                                         <option value="" selected>Choose...</option>
                                         <option value="1">Paid</option>
-                                        <option value="0">Free</option>
+                                        <option value="0" selected>Free</option>
                                     </select>
                                     
                                     <div class="valid-feedback">Looks good!</div>
@@ -76,9 +76,23 @@
                             </div>
                             <div class="mb-3 col-md-6" id="price">
                                     <label for="price" class="form-label">Set Price</label>
-                                    <input type="number" class="form-control price" name="price" value="0" placeholder="Start Date" required>
+                                    <input type="number" class="form-control price" name="price" value="0" required>
 
                                     
+                                    <div class="valid-feedback">Looks good!</div>
+                                    <div class="invalid-feedback">required</div>
+                            </div>
+
+                            <!-- bank input -->
+                            <div class="mb-3 col-md-6" id="bank">
+                                    <label for="title" class="form-label">Bank Name</label>
+                                    <input type="text"  class="form-control" name="bank" placeholder="Bank name" required>
+                                    <div class="valid-feedback">Looks good!</div>
+                                    <div class="invalid-feedback">required</div>
+                            </div>
+                            <div class="mb-3 col-md-6" id="account">
+                                    <label for="title" class="form-label">Bank Account</label>
+                                    <input type="text"  class="form-control" name="account" placeholder="Bank account" required>
                                     <div class="valid-feedback">Looks good!</div>
                                     <div class="invalid-feedback">required</div>
                             </div>
@@ -102,7 +116,7 @@
 
                             </div>
                             <div class="mb-3 col-md-12">
-                                <button type="submit" class="btn btn-primary btn-block"><i class="fas fa-save"></i> Create Announcement</button>
+                                <button type="submit" class="btn btn-primary btn-block"><i class="fas fa-save"></i> Create Program</button>
                             </div>
                     </div>
 
@@ -128,17 +142,25 @@
             height: 100
         });
 
-$("#price").hide();
+// $("#price").hide();
+$("#bank").hide();
+$("#account").hide();
 $("#pricing").change(function(){
 
 let pricing = $("#pricing").val();
   
 if(pricing == 0){
-                $("#price").hide();
+                // $("#price").slideUp();
+                $("#bank").slideUp();
+                $("#account").slideUp();
+                $("#setbank").val('');
+                $("#setaccount").val('');
                 $(".price").attr("required", false);
                 
             } else{
-                $("#price").show();
+                $("#price").slideDown();
+                $("#account").slideDown();
+                $("#bank").slideDown();
                 $(".price").attr("required", true);
             }
 });
