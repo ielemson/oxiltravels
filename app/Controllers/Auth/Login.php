@@ -25,6 +25,17 @@ class Login extends BaseController
 
     public function index()
     {
+
+         // Check if user is logged in
+         if ($this->session->isLoggedIn && $this->session->role == "admin") {
+                
+            return redirect()->to(base_url('admin/dashboard'));
+
+            }elseif($this->session->isLoggedIn && $this->session->role == "customer"){
+                return redirect()->to(base_url('user/dashboard')); 
+            }
+
+
         $data['title'] = "Login";
         $data['title_1'] = "Login Here";
         $data['title_2'] = "Login";

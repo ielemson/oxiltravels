@@ -230,4 +230,27 @@ class Dashboard extends BaseController
         return redirect()->to(base_url('user/settings'))->with('success', "Password Updated");
 
     }
+
+    function sendMail() { 
+        
+        $data = [
+            'u_link'=>'localhost:8000',
+            'u_email'=>'ielemson@gmail.com',
+            ];
+
+        $message = "Please activate the account ".anchor('user/activate/'.$data['u_link'],'Activate Now','');
+        $email = \Config\Services::email();
+        $email->setFrom('admin@oxlyglobal.com', 'your Title Here');
+        $email->setTo($data['u_email']);
+        $email->setSubject('Your Subject here | Testing');
+        $email->setMessage($message);//your message here
+      
+        $email->setCC('admin@oxlyglobal.com');//CC
+        $email->setBCC('admin@oxlyglobal.com');// and BCC
+        $filename = '/img/yourPhoto.jpg'; //you can use the App patch 
+        $email->attach($filename);
+         
+        $email->send();
+        $email->printDebugger(['headers']);
+    }
 }
