@@ -71,7 +71,7 @@ class ManageUsers extends BaseController
     {
         $userModel = new User();
 
-        $data['users'] = $userModel->findAll();
+        $data['users'] = $userModel->where('role','customer')->findAll();
 
         return view('pages/dashboard/users/index',$data);
     }

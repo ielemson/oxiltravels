@@ -40,3 +40,4 @@ class Visits extends Model
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 }
+

@@ -124,7 +124,9 @@
                                                
                                                     <div class="mb-3 text-end">
                                                         <input type="hidden" name="id" value="<?= $payment['id'] ?>">
-                                                        <input type="hidden" name="status" value="2">
+                                                        <input type="hidden" name="status" value="2"/>
+                                                        <input type="hidden" name="u_email" value="<?= $user['email'] ?>"/>
+                                                        <input type="hidden" name="p_title" value="<?= $program['title'] ?>"/>
                                                         <button class="btn btn-danger mt-3 btn-block" type="submit"><i class="fas fa-times"></i> Payment Declined </button>
                                                     </div>
                                               

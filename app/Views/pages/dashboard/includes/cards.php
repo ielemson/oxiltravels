@@ -9,10 +9,12 @@
                                             </div>
                                         </div>
                                         <div class="col-sm-8">
-                                            <div class="detail">
+                                            <a href="<?=base_url('admin/users')?>">
+                                                <div class="detail">
                                                 <p class="detail-subtitle">Users</p>
                                                 <span class="number"><?=$users?></span>
-                                            </div>
+                                            </div></a>
+                                            
                                         </div>
                                     </div>
                                     <!-- <div class="footer">
@@ -34,6 +36,7 @@
                                             </div>
                                         </div>
                                         <div class="col-sm-8">
+                                            <a href="<?=base_url('admin/payments')?>">  
                                             <div class="detail">
                                                 <p class="detail-subtitle">Revenue</p>
                                                 <span class="number">&#x20A6;
@@ -44,7 +47,8 @@
                                                 endforeach;
                                                 echo $total;
                                                 ?></span>
-                                            </div>
+                                            </div></a>
+                                          
                                         </div>
                                     </div>
                                     <!-- <div class="footer">
@@ -68,7 +72,15 @@
                                         <div class="col-sm-8">
                                             <div class="detail">
                                                 <p class="detail-subtitle">Page views</p>
-                                                <span class="number">0</span>
+                                                <span class="number">
+                                                     <?php
+                                                 $total_views = 0;
+                                                foreach($visits as $visit):
+                                                   $total_views+= $visit['views'];
+                                                endforeach;
+                                                echo $total_views;
+                                                ?>
+                                                </span>
                                             </div>
                                         </div>
                                     </div>
