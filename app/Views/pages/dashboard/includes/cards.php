@@ -68,7 +68,15 @@
                                         <div class="col-sm-8">
                                             <div class="detail">
                                                 <p class="detail-subtitle">Page views</p>
-                                                <span class="number">0</span>
+                                                <span class="number">
+                                                     <?php
+                                                 $total_views = 0;
+                                                foreach($visits as $visit):
+                                                   $total_views+= $visit['views'];
+                                                endforeach;
+                                                echo $total_views;
+                                                ?>
+                                                </span>
                                             </div>
                                         </div>
                                     </div>
