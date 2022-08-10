@@ -3,7 +3,6 @@
 namespace App\Controllers\Auth;
 
 use App\Controllers\BaseController;
-use App\Models\BioData;
 use App\Models\User;
 use Config\Services;
 

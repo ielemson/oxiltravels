@@ -6,7 +6,6 @@ use App\Models\Annoucement;
 use App\Models\Post;
 use App\Models\PostCategory;
 use Config\Services;
-use CodeIgniter\I18n\Time; 
 class Home extends BaseController
 {
 
@@ -18,6 +17,8 @@ class Home extends BaseController
     }
     public function index()
     {
+        // $ip = $this->request->getIPAddress();
+        // dd($ip);
         $posts = new Post();
         $announcement = new Annoucement();
 		$data['title'] = "Home";
