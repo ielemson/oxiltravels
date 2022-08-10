@@ -47,7 +47,7 @@
                         </li>
                        
                         <li>
-                            <a href="<?=base_url('admin/announcement')?>"><i class="fas fa-user-plus"></i>Create User</a>
+                            <a href="<?=base_url('admin/user/create')?>"><i class="fas fa-user-plus"></i>Create User</a>
                         </li>
                         
                     </ul>

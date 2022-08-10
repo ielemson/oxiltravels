@@ -8,9 +8,12 @@
        <!-- end of navbar navigation -->
        <div class="content">
               <div class="container">
+                     <div class="col-md-12 mx-auto">
+                            <?= $this->include('includes/alerts'); ?>
+                     </div>
                      <div class="page-title">
                             <h3>Users
-                                   <a href="roles.html" class="btn btn-sm btn-outline-primary float-end"><i class="fas fa-user-shield"></i> Roles</a>
+                                   <a href="<?= base_url('admin/user/create') ?>" class="btn btn-sm btn-outline-primary float-end"><i class="fas fa-user-plus"></i> Ceate User</a>
                             </h3>
                      </div>
                      <div class="box box-primary">
@@ -31,16 +34,16 @@
                                                         <?php foreach ($users as $key => $user) { ?>
 
                                                                <tr>
-                                        <td><?=$user['name']?></td>
-                                        <td><?=$user['email']?></td>
-                                        <td><?=$user['role']?></td>
-                                        <!-- <td><?=$user['role']?></td> -->
-                                        <td>Active</td>
-                                        <td class="text-end">
-                                            <a href="" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
-                                            <a href="" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash"></i></a>
-                                        </td>
-                                    </tr>
+                                                                      <td><?= $user['name'] ?></td>
+                                                                      <td><?= $user['email'] ?></td>
+                                                                      <td><?= $user['role'] ?></td>
+                                                                      <!-- <td><?= $user['role'] ?></td> -->
+                                                                      <td>Active</td>
+                                                                      <td class="text-end">
+                                                                             <a href="<?= base_url('admin/user/edit') ?>/<?= $user['id'] ?>" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
+                                                                             <a href="#" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash" data-id="<?=$user['id']?>"></i></a>
+                                                                      </td>
+                                                               </tr>
                                                         <?php }
                                                  } else { ?>
                                                         <!-- =============== SECTION BANNER =============== -->
@@ -66,3 +69,50 @@
        </div>
 </div>
 <?= $this->endSection(); ?>
+
+
+
+
+<?=$this->section('extra_js');?>
+<script>
+
+$( ".fa-trash" ).click(function() {
+ var attr = $(this).attr("data-id");
+   
+ $.confirm({
+    title: 'Warning!'+attr,
+    content: 'Proceed with action ?',
+    type: 'red',
+    typeAnimated: true,
+    buttons: {
+        tryAgain: {
+            text: 'Delete',
+            btnClass: 'btn-red',
+            action: function(){
+              var id = {'id': attr}
+            $.ajax({
+                url: "<?=base_url('admin/user/destroy')?>",
+                type: "POST",
+                data: id,
+                dataType: "json",
+                success: function(res) {
+                 if(res.success == true){
+                    $.alert('User deleted');
+                    setTimeout(function(){
+                    window.location.reload()
+                    }, 2000);
+                 }
+                }
+            });
+            }
+        },
+        close: function () {
+        }
+    }
+});
+
+
+});
+
+</script>
+<?=$this->endSection();?>

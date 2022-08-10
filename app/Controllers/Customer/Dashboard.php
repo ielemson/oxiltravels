@@ -140,7 +140,28 @@ class Dashboard extends BaseController
                 'cost'              => $this->request->getPost('price')
             ]);
         }
-        return redirect()->to(base_url('user/dashboard'))->with('success', "payment created");
+        
+        $data = [
+                'u_email'=>session()->get('email'),
+                'u_name'=>session()->get('username'),
+                'program'=>$this->request->getPost('ptitle')
+            ];
+
+        
+        $email = \Config\Services::email();
+         // Using a custom template
+        $template = view("email/payment", $data);
+        $email->setFrom('admin@oxlyglobal.com', 'Program Application');
+        $email->setTo($data['u_email']);
+        $email->setSubject($this->request->getPost('ptitle'));
+        $email->setMessage($template);//your message here
+      
+        $email->setCC('admin@oxlyglobal.com');//CC
+        $email->setBCC('admin@oxlyglobal.com');//BCC
+        $email->send();
+       
+        
+        return redirect()->to(base_url('user/dashboard'))->with('success', "payment received,under review. Feedback will be provided shortly.");
     }
 
 
@@ -229,5 +250,31 @@ class Dashboard extends BaseController
 
         return redirect()->to(base_url('user/settings'))->with('success', "Password Updated");
 
+    }
+    
+    
+    function sendMail() { 
+        
+        $data = [
+            'u_link'=>'localhost:8000',
+            'u_email'=>'ielemson@gmail.com',
+            ];
+
+        $message = "Please activate the account ".anchor('user/activate/'.$data['u_link'],'Activate Now','');
+        $email = \Config\Services::email();
+         // Using a custom template
+        $template = view("email/payment", []);
+        $email->setFrom('admin@oxlyglobal.com', 'your Title Here');
+        $email->setTo($data['u_email']);
+        $email->setSubject('Your Subject here | Testing');
+        $email->setMessage($template);//your message here
+      
+        $email->setCC('admin@oxlyglobal.com');//CC
+        $email->setBCC('admin@oxlyglobal.com');// and BCC
+        $filename = '/img/yourPhoto.jpg'; //you can use the App patch 
+        $email->attach($filename);
+         
+        $email->send();
+        $email->printDebugger(['headers']);
     }
 }
