@@ -3,7 +3,7 @@
     'use strict';
     
     $('#dataTables-example').DataTable({
-        responsive: true,
+        // responsive: true,
         pageLength: 20,
         lengthChange: false,
         searching: true,

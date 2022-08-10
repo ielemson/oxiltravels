@@ -4,7 +4,7 @@ namespace Config;
 
 // Create a new instance of our RouteCollection class.
 $routes = Services::routes();
-
+$this->session = Services::session();
 // Load the system's routing file first, so that the app and ENVIRONMENT
 // can override as needed.
 if (is_file(SYSTEMPATH . 'Config/Routes.php')) {
@@ -34,6 +34,7 @@ $routes->set404Override();
 */
 $routes->set404Override(function () {
 	return view('error404');
+	// $routes->get('contact', 'Home::contact');
 });
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
@@ -71,6 +72,7 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin', "filter" => "au
 	$routes->get('payments', 'Admin::payments', ['as' => 'payments']);
 	$routes->get('payment/(:any)', 'Admin::payment/$1');
 	$routes->post('payment/approve', 'Admin::approve_payment');
+	$routes->post('payment/destroy', 'Admin::destroy_payment');
 
 	// Post  & Category Route
 	$routes->get('post/create', 'Post::create', ['as' => 'create']);

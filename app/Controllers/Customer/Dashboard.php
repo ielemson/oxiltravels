@@ -251,8 +251,12 @@ class Dashboard extends BaseController
         return redirect()->to(base_url('user/settings'))->with('success', "Password Updated");
 
     }
+<<<<<<< HEAD
     
     
+=======
+
+>>>>>>> 531772ba57e57f6a683747d9e304c665f806e49e
     function sendMail() { 
         
         $data = [
@@ -262,12 +266,19 @@ class Dashboard extends BaseController
 
         $message = "Please activate the account ".anchor('user/activate/'.$data['u_link'],'Activate Now','');
         $email = \Config\Services::email();
+<<<<<<< HEAD
          // Using a custom template
         $template = view("email/payment", []);
         $email->setFrom('admin@oxlyglobal.com', 'your Title Here');
         $email->setTo($data['u_email']);
         $email->setSubject('Your Subject here | Testing');
         $email->setMessage($template);//your message here
+=======
+        $email->setFrom('admin@oxlyglobal.com', 'your Title Here');
+        $email->setTo($data['u_email']);
+        $email->setSubject('Your Subject here | Testing');
+        $email->setMessage($message);//your message here
+>>>>>>> 531772ba57e57f6a683747d9e304c665f806e49e
       
         $email->setCC('admin@oxlyglobal.com');//CC
         $email->setBCC('admin@oxlyglobal.com');// and BCC

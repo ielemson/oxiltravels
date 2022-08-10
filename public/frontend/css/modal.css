@@ -79,15 +79,7 @@ a[data-toggle="modal"] {
   background-color: #2980B9;
   box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15);
 }
-footer {
-  text-align: center;
-  margin: 15px;
-}
-footer h4{
-  font-size: 2.92rem;
-  font-weight:100;
-    margin: 1.46rem 0 1.168rem; 
-}
+
 
 .f-website {
   position: fixed;

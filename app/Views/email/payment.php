@@ -161,22 +161,7 @@
 																			</table>
 																		</th>
 																		<th style="padding-bottom: 25px !important; font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;" class="column" width="1"></th>
-																		<!--<th class="column" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;">-->
-																		<!--	<table width="100%" border="0" cellspacing="0" cellpadding="0">-->
-																		<!--		<tr>-->
-																		<!--			<td align="right">-->
-																		<!--				<table class="center" border="0" cellspacing="0" cellpadding="0" style="text-align:center;">-->
-																		<!--					<tr>-->
-																		<!--						<td class="img" width="55" style="font-size:0pt; line-height:0pt; text-align:left;"><img src="images/ico_facebook.jpg" width="33" height="33" border="0" alt="" /></td>-->
-																		<!--						<td class="img" width="55" style="font-size:0pt; line-height:0pt; text-align:left;"><img src="images/ico_twitter.jpg" width="33" height="33" border="0" alt="" /></td>-->
-																		<!--						<td class="img" width="55" style="font-size:0pt; line-height:0pt; text-align:left;"><img src="images/ico_instagram.jpg" width="33" height="33" border="0" alt="" /></td>-->
-																		<!--						<td class="img" width="34" style="font-size:0pt; line-height:0pt; text-align:left;"><img src="images/ico_linkedin.jpg" width="33" height="33" border="0" alt="" /></td>-->
-																		<!--					</tr>-->
-																		<!--				</table>-->
-																		<!--			</td>-->
-																		<!--		</tr>-->
-																		<!--	</table>-->
-																		<!--</th>-->
+																		
 																	</tr>
 																</table>
 															</td>
