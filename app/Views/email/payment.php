@@ -124,7 +124,7 @@
 															<td class="h1 white center" style="padding-bottom: 20px; font-family:'Lato', Arial, sans-serif; font-size:44px; line-height:50px; color:#ffffff; text-align:center;">Thank You!</td>
 														</tr>
 														<tr>
-															<td class="text white center" style="padding-bottom: 25px; font-family:'Lato', Arial, sans-serif; font-size:16px; line-height:28px; min-width:auto !important; color:#ffffff; text-align:center;">Payment for the program </td>
+															<td class="text white center" style="padding-bottom: 25px; font-family:'Lato', Arial, sans-serif; font-size:16px; line-height:28px; min-width:auto !important; color:#ffffff; text-align:center;">Payment for <?=$program;?> has been received and under review.</td>
 														</tr>
 														<tr>
 															<td align="center">
@@ -161,22 +161,7 @@
 																			</table>
 																		</th>
 																		<th style="padding-bottom: 25px !important; font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;" class="column" width="1"></th>
-																		<!--<th class="column" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;">-->
-																		<!--	<table width="100%" border="0" cellspacing="0" cellpadding="0">-->
-																		<!--		<tr>-->
-																		<!--			<td align="right">-->
-																		<!--				<table class="center" border="0" cellspacing="0" cellpadding="0" style="text-align:center;">-->
-																		<!--					<tr>-->
-																		<!--						<td class="img" width="55" style="font-size:0pt; line-height:0pt; text-align:left;"><img src="images/ico_facebook.jpg" width="33" height="33" border="0" alt="" /></td>-->
-																		<!--						<td class="img" width="55" style="font-size:0pt; line-height:0pt; text-align:left;"><img src="images/ico_twitter.jpg" width="33" height="33" border="0" alt="" /></td>-->
-																		<!--						<td class="img" width="55" style="font-size:0pt; line-height:0pt; text-align:left;"><img src="images/ico_instagram.jpg" width="33" height="33" border="0" alt="" /></td>-->
-																		<!--						<td class="img" width="34" style="font-size:0pt; line-height:0pt; text-align:left;"><img src="images/ico_linkedin.jpg" width="33" height="33" border="0" alt="" /></td>-->
-																		<!--					</tr>-->
-																		<!--				</table>-->
-																		<!--			</td>-->
-																		<!--		</tr>-->
-																		<!--	</table>-->
-																		<!--</th>-->
+																		
 																	</tr>
 																</table>
 															</td>

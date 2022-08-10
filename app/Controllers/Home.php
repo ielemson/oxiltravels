@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Models\Annoucement;
 use App\Models\Post;
 use App\Models\PostCategory;
+use App\Models\Visits;
 use Config\Services;
 class Home extends BaseController
 {
@@ -19,6 +20,7 @@ class Home extends BaseController
     {
         // $ip = $this->request->getIPAddress();
         // dd($ip);
+        $visit = new Visits();
         $posts = new Post();
         $announcement = new Annoucement();
 		$data['title'] = "Home";
