@@ -92,6 +92,9 @@
       <!-- announcement page-->
       <?=$this->include('includes/announcement');?>
       <!--announcement page--->
+      <!-- partner page-->
+      <?=$this->include('includes/partner');?>
+      <!--partner page--->
     
 <?= $this->endSection(); ?>
  <!-- Page Header-->

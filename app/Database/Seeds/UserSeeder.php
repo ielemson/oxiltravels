@@ -19,7 +19,7 @@ class UserSeeder extends Seeder
 			],
 			[
 				"name" => "Damola Abiola",
-				"email" => "admin@oxiltravel.com",
+				"email" => "admin@oxlyglobal.com",
 				"role" => "admin",
 				"password" => password_hash("Damo1234", PASSWORD_DEFAULT)
 			],

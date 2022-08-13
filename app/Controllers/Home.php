@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\Annoucement;
+use App\Models\Partner;
 use App\Models\Post;
 use App\Models\PostCategory;
 use App\Models\Visits;
@@ -22,12 +23,14 @@ class Home extends BaseController
         // dd($ip);
         $visit = new Visits();
         $posts = new Post();
+        $partner = new Partner();
         $announcement = new Annoucement();
 		$data['title'] = "Home";
 		$data['active_nav_index'] = "active";
        
         $data['announcement'] = $announcement->where('status', 1)->first();
         $data['posts'] = $posts->where('status', 1)->findAll();
+        $data['partners'] = $partner->findAll();
         // dd($data);
         return view('pages/home',$data);
     }

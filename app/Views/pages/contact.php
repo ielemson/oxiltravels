@@ -33,8 +33,8 @@
                 <div class="box-contacts-body">
                   <div class="box-contacts-icon fl-bigmug-line-chat55"></div>
                   <div class="box-contacts-decor"></div>
-                  <p class="box-contacts-link"><a href="mailto:info@oxiltravel.com">info@oxiltravel.com</a></p>
-                  <p class="box-contacts-link"><a href="mailto:inquiry@oxiltravel.com">inquiry@oxiltravel.com</a></p>
+                  <p class="box-contacts-link"><a href="mailto:info@oxlyglobal.com">info@oxlyglobal.com</a></p>
+                  <p class="box-contacts-link"><a href="mailto:inquiry@oxlyglobal.com">inquiry@oxlyglobal.com</a></p>
                 </div>
               </article>
             </div>
