@@ -4,17 +4,17 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Visits extends Model
+class Partner extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'visits';
+    protected $table            = 'partners';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $insertID         = 0;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['session_id','user_id','ip_address','user_agent','scheme','host','port','user','pass','path','query','fragment','views'];
+    protected $allowedFields    = ['img'];
 
     // Dates
     protected $useTimestamps = false;
@@ -40,4 +40,3 @@ class Visits extends Model
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 }
-

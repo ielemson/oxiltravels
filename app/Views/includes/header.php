@@ -31,7 +31,7 @@
                             <li>
                                 <div class="unit unit-spacing-xs">
                                     <div class="unit-left"><span class="icon fa fa-envelope"></span></div>
-                                    <div class="unit-body"><a class="link-phone" href="mailto:inquiry@oxiltravel.com">inquiry@oxiltravel.com</a></div>
+                                    <div class="unit-body"><a class="link-phone" href="mailto:inquiry@oxlyglobal.com">inquiry@oxlyglobal.com</a></div>
                                 </div>
                             </li>
                             <!-- </ul><a class="button button-md button-default-outline-2 button-ujarak" href="<?= base_url('customer/register') ?>">Signup</a> -->

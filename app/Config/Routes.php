@@ -111,6 +111,11 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin', "filter" => "au
 	$routes->post('user/update', 'ManageUsers::update');
 	$routes->post('user/destroy', 'ManageUsers::destroy');
 
+	// Partner
+	$routes->get('partner', 'Partner::index');
+	$routes->post('partner/save', 'Partner::save');
+	$routes->get('partner/destroy/(:any)', 'Partner::destroy/$1');
+
 });
 
 

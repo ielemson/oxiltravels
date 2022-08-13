@@ -130,7 +130,7 @@ class Admin extends BaseController
             ];
 
           if($this->request->getPost('status') == 1){
-                $email = \Config\Services::email();
+        $email = \Config\Services::email();
          // Using a custom template
         $template = view("email/approval", $data);
         $email->setFrom('admin@oxlyglobal.com', 'Payment Approval');

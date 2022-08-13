@@ -16,7 +16,7 @@
                       <li>
                         <div class="unit">
                           <div class="unit-left"><span class="icon fa fa-envelope"></span></div>
-                          <div class="unit-body"><a class="link-aemail" href="mailto:inquiry@oxiltravel.com">inquiry@oxiltravel.com</a></div>
+                          <div class="unit-body"><a class="link-aemail" href="mailto:inquiry@oxlyglobal.com">inquiry@oxlyglobal.com</a></div>
                         </div>
                       </li>
                       <li>

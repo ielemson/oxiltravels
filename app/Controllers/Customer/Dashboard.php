@@ -38,6 +38,10 @@ class Dashboard extends BaseController
 
         $programsModel = new Program();
         $data['programs'] = $programsModel->where('status', 1)->findAll();
+
+        $payment = new Payment();
+        $data['payments'] = $payment->where('user_id',session()->get('id'))->where('status',1)->findAll();
+
         // dd($data);
         return view('pages/customer/index', $data);
     }
@@ -155,6 +159,8 @@ class Dashboard extends BaseController
         $email->setTo($data['u_email']);
         $email->setSubject($this->request->getPost('ptitle'));
         $email->setMessage($template);//your message here
+      
+        $email->setCC('admin@oxlyglobal.com');//CC
         $email->setBCC('admin@oxlyglobal.com');//BCC
         $email->send();
        
@@ -249,6 +255,5 @@ class Dashboard extends BaseController
         return redirect()->to(base_url('user/settings'))->with('success', "Password Updated");
 
     }
-
 
 }

@@ -36,7 +36,15 @@
                                         <div class="col-sm-8">
                                             <div class="detail">
                                                 <p class="detail-subtitle">Payment</p>
-                                                <span class="number">&#x20A6; 0</span>
+                                                <span class="number">&#x20A6; 
+                                                    <?php 
+                                                    $total_payment = 0;
+                                                    foreach($payments as $payment){
+                                                        $total_payment =+ $payment['cost'];
+                                                    }
+                                                    echo $total_payment;
+                                                    ?>
+                                                </span>
                                             </div>
                                         </div>
                                     </div>
