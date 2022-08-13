@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
+    <meta name="keywords" content="travel and tours agency,book ticket, hotel reservations">
+    <meta name="description" content="Love traveling? oxylglobal travel and tours will help you with the necesary process.">
+    <meta name="date" content="2022">
     <link rel="icon" href="<?=base_url('frontend/images/favicon.png')?>" type="image/x-icon">
     <!-- Stylesheets-->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7CPoppins:400%7CTeko:300,400">
