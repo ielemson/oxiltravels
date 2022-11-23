@@ -13,7 +13,7 @@
             </div>
             <div class="page-title">
                 <h3>Posts
-                    <a href="<?= base_url('admin/post/create') ?>" class="btn btn-sm btn-outline-primary float-end"><i class="fas fa-newspaper"></i> Create Post</a>
+                    <a href="<?= base_url('admin/location/create') ?>" class="btn btn-sm btn-outline-primary float-end"><i class="fas fa-newspaper"></i> Create Location</a>
                 </h3>
             </div>
             <div class="box box-primary">
@@ -22,21 +22,20 @@
                 </div>
             </div>
             <div class="row">
-                <?php if (count($posts) > 0) : ?>
-                    <?php foreach ($posts as $post) : ?>
+                <?php if (count($locations) > 0) : ?>
+                    <?php foreach ($locations as $post) : ?>
                         <div class="col-md-3">
                             <div class="card mb-3">
-                                <img class="card-img-top thumbnail" src="<?= base_url('frontend/images/post') ?>/<?= $post['file'] ?>" alt="post" style="width:100%; height:250px;">
+                                <img class="card-img-top thumbnail" src="<?= base_url('frontend/images/location') ?>/<?= $post['img'] ?>" alt="post" style="width:100%; height:250px;">
                                 <div class="card-body">
                                     <h5 class="card-title"><?= $post['title'] ?></h5>
                                     <!-- <p class="card-text"><?= $post['content'] ?></p> -->
-                                    <p class="card-text"><small class="text-muted"><?= $post['created_at'] ?></small></p>
                                 </div>
                                 <div class="card-footer text-end btn-group">
-                                    <a href="<?= base_url('admin/post/edit/' . $post['id']) ?>" class="btn btn-info btn-sm text-black"><i class="fa fa-edit"></i></a>
-                                    <button data-id="<?= $post['id']; ?>" class="delete btn btn-danger btn-sm text-black"><i class="fa fa-trash"></i></button>
-                                    <input type="hidden" class="input" />
-                                    <button  data-file="<?= $post['file']; ?>"  data-title="<?= $post['title']; ?>" class="viewContent btn btn-primary btn-sm text-black"><i class="fa fa-eye"></i></button>
+                                    <a href="<?= base_url('admin/location/edit/' . $post['id']) ?>" class="btn btn-info btn-sm text-black"><i class="fa fa-edit"></i></a>
+                                    <a href="<?= base_url('admin/location/destroy/' . $post['id']) ?>" class="delete btn btn-danger btn-sm text-black"><i class="fa fa-trash"></i></a>
+                                    <!-- <input type="hidden" class="input" /> -->
+                                    <button  data-file="<?= $post['img']; ?>"  data-title="<?= $post['title']; ?>" class="viewContent btn btn-primary btn-sm text-black"><i class="fa fa-eye"></i></button>
                                 </div>
                             </div>
 
@@ -67,7 +66,7 @@
         var attr = $(this).attr("data-id");
         $.confirm({
             title: 'Confirm!',
-            content: 'Delete Post?',
+            content: 'Delete Location?',
             type: 'red',
             buttons: {
                 confirm: function() {
@@ -76,15 +75,15 @@
                         'id': attr
                     }
                     $.ajax({
-                        url: "<?= base_url('admin/post/destroy') ?>",
+                        url: "<?= base_url('admin/location/destroy') ?>",
                         type: "POST",
                         data: id,
                         dataType: "json",
                         success: function(res) {
                             if (res.success == true) {
-                                $.alert('Post removed');
+                                $.alert('Location removed');
                                 setTimeout(function() {
-                                    window.location.href = "<?= base_url('admin/post/index') ?>"
+                                    window.location.href = "<?= base_url('admin/location/index') ?>"
                                 }, 2000);
                             } else {
                                 $.alert('Error!');

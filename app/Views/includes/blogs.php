@@ -32,7 +32,7 @@
  <script type="text/javascript">  
   $().ready(function() {  
  let timeval =  $('.date.val').text()
-console.log(timeval)
+// console.log(timeval)
   });  
 </script>  
  <?= $this->endSection()?>

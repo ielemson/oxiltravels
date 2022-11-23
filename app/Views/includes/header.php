@@ -18,20 +18,20 @@
                                 <div class="unit unit-spacing-xs">
                                     <div class="unit-left"><span class="icon fa fa-clock-o"></span></div>
                                     <div class="unit-body">
-                                        <p>09:00<span>am</span> — 05:00<span>pm</span></p>
+                                        <p><?=$setting['resume']?><span>am</span> — <?=$setting['close']?><span>pm</span></p>
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div class="unit unit-spacing-xs">
                                     <div class="unit-left"><span class="icon fa fa-phone"></span></div>
-                                    <div class="unit-body"><a class="link-phone" href="tel:+44 763 749 109">+44 763 749 109</a></div>
+                                    <div class="unit-body"><a class="link-phone" href="tel:<?=$setting['phone']?>"><?=$setting['phone']?></a></div>
                                 </div>
                             </li>
                             <li>
                                 <div class="unit unit-spacing-xs">
                                     <div class="unit-left"><span class="icon fa fa-envelope"></span></div>
-                                    <div class="unit-body"><a class="link-phone" href="mailto:inquiry@oxlyglobal.com">inquiry@oxlyglobal.com</a></div>
+                                    <div class="unit-body"><a class="link-phone" href="mailto:<?=$setting['email']?>"><?=$setting['email']?></a></div>
                                 </div>
                             </li>
                             <!-- </ul><a class="button button-md button-default-outline-2 button-ujarak" href="<?= base_url('customer/register') ?>">Signup</a> -->
@@ -43,10 +43,9 @@
                 <div class="rd-navbar-main">
                     <div class="rd-navbar-nav-wrap">
                         <ul class="list-inline list-inline-md rd-navbar-corporate-list-social">
-                            <li><a class="icon fa fa-facebook" href="#"></a></li>
-                            <li><a class="icon fa fa-twitter" href="#"></a></li>
-                            <!-- <li><a class="icon fa fa-google-plus" href="#"></a></li> -->
-                            <li><a class="icon fa fa-instagram" href="#"></a></li>
+                            <li><a class="icon fa fa-facebook" href="<?=$setting['facebook']?>" target="_blank" rel="noopener noreferrer"></a></li>
+                            <li><a class="icon fa fa-twitter" href="<?=$setting['twitter']?>" target="_blank" rel="noopener noreferrer"></a></li>
+                            <li><a class="icon fa fa-instagram" href="<?=$setting['instagram']?>" target="_blank" rel="noopener noreferrer"></a></li>
                         </ul>
                         <!-- RD Navbar Nav-->
                         <ul class="rd-navbar-nav">

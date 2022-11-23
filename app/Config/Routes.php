@@ -17,7 +17,7 @@ if (is_file(SYSTEMPATH . 'Config/Routes.php')) {
 * --------------------------------------------------------------------
 */
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Home');
+$routes->setDefaultController('HomeController');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
@@ -34,30 +34,34 @@ $routes->set404Override();
 */
 $routes->set404Override(function () {
 	return view('error404');
-	// $routes->get('contact', 'Home::contact');
+	// $routes->get('contact', 'HomeController::contact');
 });
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
+$routes->get('/', 'HomeController::index');
 // about us route
-$routes->get('about', 'Home::about');
+$routes->get('about', 'HomeController::about');
 // contact us route 
-$routes->get('contact', 'Home::contact');
+$routes->get('contact', 'HomeController::contact',['as' => 'contact']);
+$routes->post('contact/sendemail', 'HomeController::contactus');
+$routes->get('tours', 'HomeController::tours');
+$routes->get('tour/(:any)', 'HomeController::tour/$1');
 // Post route
-$routes->get('post/(:any)', 'Home::post/$1');
-$routes->get('posts/category/(:any)', 'Home::category_post/$1');
+$routes->get('post/(:any)', 'HomeController::post/$1');
+$routes->get('posts/category/(:any)', 'HomeController::category_post/$1');
+
 
 
 // General Controller :: No Auth 
 $routes->group('auth', ['namespace' => 'App\Controllers'], function ($routes) {
 	// Registration 
-	$routes->get('register', 'Auth\Register::index');
-	$routes->post('register', 'Auth\Register::register');
+	$routes->get('register', 'Auth\RegisterController::index');
+	$routes->post('register', 'Auth\RegisterController::register');
 
 
 	//Login
-	$routes->get('login', 'Auth\Login::index');
-	$routes->post('login', 'Auth\Login::login');
+	$routes->get('login', 'Auth\LoginController::index');
+	$routes->post('login', 'Auth\LoginController::login');
 
 });
 
@@ -65,14 +69,14 @@ $routes->group('auth', ['namespace' => 'App\Controllers'], function ($routes) {
 $routes->group('admin', ['namespace' => 'App\Controllers\Admin', "filter" => "auth"], function ($routes) {
 
 	// ADMIN DASHBOARD
-	$routes->get('dashboard', 'Admin::index', ['as' => 'dashboard']);
-	// $routes->get('users', 'Admin::users', ['as' => 'users']);
+	$routes->get('dashboard', 'AdminController::index', ['as' => 'dashboard']);
+	// $routes->get('users', 'AdminController::users', ['as' => 'users']);
 
 	// User payment route
-	$routes->get('payments', 'Admin::payments', ['as' => 'payments']);
-	$routes->get('payment/(:any)', 'Admin::payment/$1');
-	$routes->post('payment/approve', 'Admin::approve_payment');
-	$routes->post('payment/destroy', 'Admin::destroy_payment');
+	$routes->get('payments', 'AdminController::payments', ['as' => 'payments']);
+	$routes->get('payment/(:any)', 'AdminController::payment/$1');
+	$routes->post('payment/approve', 'AdminController::approve_payment');
+	$routes->post('payment/destroy', 'AdminController::destroy_payment');
 
 	// Post  & Category Route
 	$routes->get('post/create', 'Post::create', ['as' => 'create']);
@@ -116,6 +120,26 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin', "filter" => "au
 	$routes->post('partner/save', 'Partner::save');
 	$routes->get('partner/destroy/(:any)', 'Partner::destroy/$1');
 
+	// Settings
+	$routes->get('settings','SettingController::generalSettings');
+	$routes->post('settings/slider','SettingController::slider');
+	$routes->post('settings/update/general','SettingController::update_general');
+	$routes->post('settings/update/url','SettingController::update_url');
+	// Sliders 
+	$routes->get('settings/slider/edit/(:any)', 'SettingController::slider_edit/$1');
+	$routes->post('settings/slider/update', 'SettingController::slider_update');
+	$routes->get('settings/slider/destroy/(:any)', 'SettingController::slider_destroy/$1');
+
+	// LOCATION CONTROLLER
+	$routes->get('locations','LocationController::index');
+	$routes->get('location/create','LocationController::create');
+	$routes->post('location/store','LocationController::store');
+	$routes->get('location/edit/(:any)','LocationController::edit/$1');
+	$routes->post('location/update','LocationController::update');
+	$routes->get('location/destroy/(:any)', 'LocationController::destroy/$1');
+
+
+
 });
 
 
@@ -139,6 +163,15 @@ $routes->group('', ['namespace' => 'App\Controllers', "filter" => "auth"], funct
 	// ADMIN DASHBOARD
 	$routes->get('logout', 'Auth\Login::logout');
 	$routes->get('user/logout', 'Auth\Login::userLogout');
+
+	// Ticket Controller
+	$routes->get('admin/tickets','TicketController::admin_ticket_view');
+
+	// User Ticket
+	$routes->get('user/tickets','TicketController::user_ticket_view');
+	$routes->get('user/ticket/create','TicketController::user_ticket_create');
+	$routes->post('user/ticket/store','TicketController::user_ticket_store');
+	$routes->get('user/ticket/(:any)','TicketController::user_ticket/$1');
 });
 
 

@@ -3,11 +3,13 @@
 namespace App\Controllers\Auth;
 
 use App\Controllers\BaseController;
+use App\Models\Post;
+use App\Models\Setting;
 use App\Models\User;
-use App\Models\BioData;
+// use App\Models\BioData;
 use Config\Services;
 
-class Register extends BaseController
+class RegisterController extends BaseController
 {
     protected $session;
 
@@ -26,6 +28,8 @@ class Register extends BaseController
     {
 
         // Check if user is logged in
+        $setting = new Setting();
+        $postModel = new Post();
         if ($this->session->isLoggedIn && $this->session->role == "admin") {
 
             return redirect()->to(base_url('admin/dashboard'));
@@ -40,6 +44,8 @@ class Register extends BaseController
         $data['title_2'] = "Register";
         $data['banner_img'] = "register.jpg";
         $data['active_nav_login'] = "active";
+        $data['setting'] = $setting->where('id', 1)->first();
+        $data['footerposts'] = $postModel->where('status', 1)->limit(2)->find();
 
         return view('pages/auth/register', $data);
     }

@@ -10,19 +10,19 @@
                       <li>
                         <div class="unit">
                           <div class="unit-left"><span class="icon fa fa-phone"></span></div>
-                          <div class="unit-body"><a class="link-phone" href="tel_3a#">+44 763 749 109, <br/>+234 813 730 1330</a></div>
+                          <div class="unit-body"><a class="link-phone" href="tel:<?=$setting['phone']?>"><?=$setting['phone']?></a></div>
                         </div>
                       </li>
                       <li>
                         <div class="unit">
                           <div class="unit-left"><span class="icon fa fa-envelope"></span></div>
-                          <div class="unit-body"><a class="link-aemail" href="mailto:inquiry@oxlyglobal.com">inquiry@oxlyglobal.com</a></div>
+                          <div class="unit-body"><a class="link-aemail" href="mailto:<?=$setting['email']?>"><?=$setting['email']?></a></div>
                         </div>
                       </li>
                       <li>
                         <div class="unit">
                           <div class="unit-left"><span class="icon fa fa-location-arrow"></span></div>
-                          <div class="unit-body"><a class="link-location" href="#">139 Obafemi Awolowo Way, Ikeja Lagos</a></div>
+                          <div class="unit-body"><a class="link-location" href="#"><?=$setting['address']?></a></div>
                         </div>
                       </li>
                     </ul>
@@ -32,21 +32,19 @@
               <div class="col-sm-6 col-md-5 col-lg-3 col-xl-4">
                 <div class="oh-desktop">
                   <div class="wow slideInDown" data-wow-delay="0s">
-                    <h6 class="text-spacing-100 text-uppercase">Popular news</h6>
+                    <h6 class="text-spacing-100 text-uppercase">Popular Blogs</h6>
                     <!-- Post Minimal 2-->
+                    <?php if(count($footerposts) > 0):?>
+                    <?php foreach($footerposts as $post):?>
+                      
                     <article class="post post-minimal-2">
-                      <p class="post-minimal-2-title"><a href="<?=base_url('/')?>">Your Personal Guide to 5 Best Places to Visit on Earth</a></p>
+                      <p class="post-minimal-2-title"><a href="<?= base_url('post/'.$post['slug']);?>"><?=$post['title']?></a></p>
                       <div class="post-minimal-2-time">
-                        <time datetime="2020-05-04">May 04, 2020</time>
+                        <time datetime="2020-05-04"><?= date("M-Y", strtotime($post['created_at']));?></time>
                       </div>
                     </article>
-                    <!-- Post Minimal 2-->
-                    <article class="post post-minimal-2">
-                      <p class="post-minimal-2-title"><a href="<?=base_url('/')?>">Top 10 Hotels: Rating by Wonder Tour Travel Experts</a></p>
-                      <div class="post-minimal-2-time">
-                        <time datetime="2020-05-04">May 04, 2020</time>
-                      </div>
-                    </article>
+                  <?php endforeach; ?>
+                  <?php endif;?>
                   </div>
                 </div>
               </div>
@@ -74,10 +72,9 @@
               <div class="col-sm-6 col-md-4 text-sm-right text-md-center">
                 <div>
                   <ul class="list-inline list-inline-sm footer-social-list-2">
-                    <li><a class="icon fa fa-facebook" href="#"></a></li>
-                    <li><a class="icon fa fa-twitter" href="#"></a></li>
-                    <!-- <li><a class="icon fa fa-google-plus" href="#"></a></li> -->
-                    <li><a class="icon fa fa-instagram" href="#"></a></li>
+                  <li><a class="icon fa fa-facebook" href="<?=$setting['facebook']?>" target="_blank" rel="noopener noreferrer"></a></li>
+                            <li><a class="icon fa fa-twitter" href="<?=$setting['twitter']?>" target="_blank" rel="noopener noreferrer"></a></li>
+                            <li><a class="icon fa fa-instagram" href="<?=$setting['instagram']?>" target="_blank" rel="noopener noreferrer"></a></li>
                   </ul>
                 </div>
               </div>
@@ -93,3 +90,4 @@
           </div>
         </div>
       </footer>
+

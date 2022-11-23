@@ -60,7 +60,7 @@ class Post extends BaseController
 
             ]);
 
-            return redirect()->to(base_url('admin/post/index'))->with('success', "post created");
+            return redirect()->to(base_url('admin/post'))->with('success', "post created");
         } else {
             return redirect()->back()->withInput()->with('errors', $post->errors());
         }

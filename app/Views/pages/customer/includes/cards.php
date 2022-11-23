@@ -92,10 +92,12 @@
                                             </div>
                                         </div>
                                         <div class="col-sm-8">
+                                            <a href="<?=base_url('user/tickets')?>">
                                             <div class="detail">
                                                 <p class="detail-subtitle">Support Request</p>
                                                 <span class="number">0</span>
                                             </div>
+                                            </a>
                                         </div>
                                     </div>
                                     <div class="footer">

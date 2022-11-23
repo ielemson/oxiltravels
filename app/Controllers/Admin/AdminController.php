@@ -11,7 +11,7 @@ use App\Models\Visits;
 use Config\Services;
 
 
-class Admin extends BaseController
+class AdminController extends BaseController
 {
 
     public function __construct()

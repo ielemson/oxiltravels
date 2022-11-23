@@ -90,6 +90,36 @@
             </ul>
         </li>
         <div class="dropdown-divider"></div>
+
+        <div class="dropdown-divider"></div>
+        <li>
+            <a href="#locationmenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down"><i class="fas fa-file"></i> Location</a>
+            <ul class="collapse list-unstyled" id="locationmenu">
+               
+                <li>
+                    <a href="<?= base_url('admin/location/create') ?>"><i class="fas fa-plus"></i>New Location</a>
+                    <a href="<?= base_url('admin/locations') ?>"><i class="fas fa-plus"></i>View Location</a>
+                </li>
+               
+
+            </ul>
+        </li>
+        <div class="dropdown-divider"></div>
+
+        <div class="dropdown-divider"></div>
+        <li>
+            <a href="#settingmenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down"><i class="fas fa-cogs"></i> Settings</a>
+            <ul class="collapse list-unstyled" id="settingmenu">
+               
+                <li>
+                    <a href="<?= base_url('admin/settings') ?>"><i class="fas fa-cog"></i>Settings</a>
+                </li>
+               
+
+            </ul>
+        </li>
+        <div class="dropdown-divider"></div>
+
         <li>
             <a href="<?= base_url('logout') ?>"><i class="fas fa-sign-out-alt text-danger"></i>Logout</a>
         </li>

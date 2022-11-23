@@ -29,6 +29,20 @@
                 </li>
                 <div class="dropdown-divider"></div> 
                 <li>
+                    <a href="#ticketmenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down"><i class="fas fa-copy"></i> Ticket</a>
+                    <ul class="collapse list-unstyled" id="ticketmenu">
+                       
+                        <li>
+                            <a href="<?=base_url('user/tickets')?>"><i class="fas fa-info-circle"></i>View</a>
+                        </li>
+                        <li>
+                            <a href="<?=base_url('user/ticket/create')?>"><i class="fas fa-info-circle"></i>Create</a>
+                        </li>
+                        
+                    </ul>
+                </li>
+                <div class="dropdown-divider"></div> 
+                <li>
                     <a href="<?=base_url('logout')?>"><i class="fas fa-sign-out-alt text-danger"></i>Logout</a>
                 </li>
             </ul>

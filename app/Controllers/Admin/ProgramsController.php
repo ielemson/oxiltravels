@@ -215,6 +215,7 @@ class ProgramsController extends BaseController
             }
     }
 
+    
     public function destroy($id=null){
 
         $programModel = new Program();
@@ -224,7 +225,7 @@ class ProgramsController extends BaseController
         if($program) { 
         unlink('./frontend/images/programs/'.$program['img']);
         $programDelete->delete();
-        return redirect()->to(base_url('admin/programs'))->with('success', "Slider Deleted Sucessfully");
+        return redirect()->to(base_url('admin/programs'))->with('success', "Program Deleted Sucessfully");
         }
         return redirect()->to(base_url('admin/programs/create'))->withInput()->with('errors', $programModel->errors());
     }
